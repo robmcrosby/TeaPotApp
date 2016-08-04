@@ -17,6 +17,7 @@
 		C182BCA41D53FE960035F4EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C182BCA31D53FE960035F4EC /* UIKit.framework */; };
 		C182BCA61D53FEAB0035F4EC /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C182BCA51D53FEAB0035F4EC /* GLKit.framework */; };
 		C182BCA91D53FF8B0035F4EC /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C182BCA71D53FF8B0035F4EC /* Application.cpp */; };
+		C182BCAE1D5408A40035F4EC /* StringUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = C182BCAD1D5408A40035F4EC /* StringUtils.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		C182BCA71D53FF8B0035F4EC /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
 		C182BCA81D53FF8B0035F4EC /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
 		C182BCAB1D5406C90035F4EC /* Vector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vector.h; sourceTree = "<group>"; };
+		C182BCAC1D5408340035F4EC /* StringUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StringUtils.h; sourceTree = "<group>"; };
+		C182BCAD1D5408A40035F4EC /* StringUtils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = StringUtils.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,9 +81,11 @@
 			children = (
 				C182BCA81D53FF8B0035F4EC /* Application.h */,
 				C182BCA71D53FF8B0035F4EC /* Application.cpp */,
+				C182BCAB1D5406C90035F4EC /* Vector.h */,
+				C182BCAC1D5408340035F4EC /* StringUtils.h */,
+				C182BCAD1D5408A40035F4EC /* StringUtils.mm */,
 				C182BCAA1D5406340035F4EC /* Objective-C */,
 				C182BC7F1D53E8840035F4EC /* Supporting Files */,
-				C182BCAB1D5406C90035F4EC /* Vector.h */,
 			);
 			path = TeaPot;
 			sourceTree = "<group>";
@@ -180,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C182BCA91D53FF8B0035F4EC /* Application.cpp in Sources */,
+				C182BCAE1D5408A40035F4EC /* StringUtils.mm in Sources */,
 				C182BC841D53E8840035F4EC /* AppDelegate.mm in Sources */,
 				C182BC9E1D53EAAC0035F4EC /* ViewController.mm in Sources */,
 				C182BC811D53E8840035F4EC /* main.mm in Sources */,

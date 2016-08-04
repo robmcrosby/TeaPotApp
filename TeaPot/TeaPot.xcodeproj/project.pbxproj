@@ -18,6 +18,7 @@
 		C182BCA61D53FEAB0035F4EC /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C182BCA51D53FEAB0035F4EC /* GLKit.framework */; };
 		C182BCA91D53FF8B0035F4EC /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C182BCA71D53FF8B0035F4EC /* Application.cpp */; };
 		C182BCAE1D5408A40035F4EC /* StringUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = C182BCAD1D5408A40035F4EC /* StringUtils.mm */; };
+		C182BCB21D540B5B0035F4EC /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C182BCB01D540B5B0035F4EC /* Shader.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,9 +38,11 @@
 		C182BCA51D53FEAB0035F4EC /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		C182BCA71D53FF8B0035F4EC /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
 		C182BCA81D53FF8B0035F4EC /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
-		C182BCAB1D5406C90035F4EC /* Vector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vector.h; sourceTree = "<group>"; };
+		C182BCAB1D5406C90035F4EC /* VectorUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VectorUtils.h; sourceTree = "<group>"; };
 		C182BCAC1D5408340035F4EC /* StringUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StringUtils.h; sourceTree = "<group>"; };
 		C182BCAD1D5408A40035F4EC /* StringUtils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = StringUtils.mm; sourceTree = "<group>"; };
+		C182BCB01D540B5B0035F4EC /* Shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shader.cpp; sourceTree = "<group>"; };
+		C182BCB11D540B5B0035F4EC /* Shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,9 +84,9 @@
 			children = (
 				C182BCA81D53FF8B0035F4EC /* Application.h */,
 				C182BCA71D53FF8B0035F4EC /* Application.cpp */,
-				C182BCAB1D5406C90035F4EC /* Vector.h */,
-				C182BCAC1D5408340035F4EC /* StringUtils.h */,
-				C182BCAD1D5408A40035F4EC /* StringUtils.mm */,
+				C182BCB11D540B5B0035F4EC /* Shader.h */,
+				C182BCB01D540B5B0035F4EC /* Shader.cpp */,
+				C182BCAF1D540A820035F4EC /* Utilities */,
 				C182BCAA1D5406340035F4EC /* Objective-C */,
 				C182BC7F1D53E8840035F4EC /* Supporting Files */,
 			);
@@ -111,6 +114,16 @@
 				C182BC9D1D53EAAC0035F4EC /* ViewController.mm */,
 			);
 			name = "Objective-C";
+			sourceTree = "<group>";
+		};
+		C182BCAF1D540A820035F4EC /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				C182BCAB1D5406C90035F4EC /* VectorUtils.h */,
+				C182BCAC1D5408340035F4EC /* StringUtils.h */,
+				C182BCAD1D5408A40035F4EC /* StringUtils.mm */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +201,7 @@
 				C182BCAE1D5408A40035F4EC /* StringUtils.mm in Sources */,
 				C182BC841D53E8840035F4EC /* AppDelegate.mm in Sources */,
 				C182BC9E1D53EAAC0035F4EC /* ViewController.mm in Sources */,
+				C182BCB21D540B5B0035F4EC /* Shader.cpp in Sources */,
 				C182BC811D53E8840035F4EC /* main.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

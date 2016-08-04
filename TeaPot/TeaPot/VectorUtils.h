@@ -1,13 +1,13 @@
 //
-//  Vector.h
+//  VectorUtils.h
 //  TeaPot
 //
 //  Created by Robert Crosby on 8/4/16.
 //  Copyright © 2016 Robert Crosby. All rights reserved.
 //
 
-#ifndef Vector_h
-#define Vector_h
+#ifndef VectorUtils_h
+#define VectorUtils_h
 
 #include <cmath>
 #include <iostream>
@@ -1161,4 +1161,4 @@ typedef Quaternion<float> quat;
 
 
 
-#endif /* Vector_h */
+#endif /* VectorUtils_h */

@@ -16,6 +16,7 @@
 		C182BCA01D53FE810035F4EC /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C182BC9F1D53FE810035F4EC /* OpenGLES.framework */; };
 		C182BCA41D53FE960035F4EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C182BCA31D53FE960035F4EC /* UIKit.framework */; };
 		C182BCA61D53FEAB0035F4EC /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C182BCA51D53FEAB0035F4EC /* GLKit.framework */; };
+		C182BCA91D53FF8B0035F4EC /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C182BCA71D53FF8B0035F4EC /* Application.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,8 @@
 		C182BCA11D53FE870035F4EC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C182BCA31D53FE960035F4EC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C182BCA51D53FEAB0035F4EC /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		C182BCA71D53FF8B0035F4EC /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
+		C182BCA81D53FF8B0035F4EC /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +80,8 @@
 				C182BC9C1D53EAAC0035F4EC /* ViewController.h */,
 				C182BC9D1D53EAAC0035F4EC /* ViewController.mm */,
 				C182BC7F1D53E8840035F4EC /* Supporting Files */,
+				C182BCA81D53FF8B0035F4EC /* Application.h */,
+				C182BCA71D53FF8B0035F4EC /* Application.cpp */,
 			);
 			path = TeaPot;
 			sourceTree = "<group>";
@@ -164,6 +169,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C182BCA91D53FF8B0035F4EC /* Application.cpp in Sources */,
 				C182BC841D53E8840035F4EC /* AppDelegate.mm in Sources */,
 				C182BC9E1D53EAAC0035F4EC /* ViewController.mm in Sources */,
 				C182BC811D53E8840035F4EC /* main.mm in Sources */,

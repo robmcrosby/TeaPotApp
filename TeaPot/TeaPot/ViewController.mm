@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import <OpenGLES/ES2/glext.h>
 
+#import "Application.h"
+
 @interface ViewController () {}
 @property (strong, nonatomic) EAGLContext *context;
 @end
@@ -18,9 +20,9 @@
 @implementation ViewController
 
 
+// Application Starting
 - (void)viewDidLoad
 {
-  // Application Starting
   [super viewDidLoad];
   
   // Get an OpenGL ES 2.0 Context
@@ -35,14 +37,14 @@
   view.drawableDepthFormat = GLKViewDrawableDepthFormat24;
   
   [EAGLContext setCurrentContext:self.context];
-  //[self setupGL];
+  Application::instance().setup();
 }
 
 
+// Application Closing
 - (void)dealloc
 {
-  // Application Closing
-  //[self tearDownGL];
+  Application::instance().teardown();
   if ([EAGLContext currentContext] == self.context) {
     [EAGLContext setCurrentContext:nil];
   }
@@ -55,7 +57,7 @@
   
   if ([self isViewLoaded] && ([[self view] window] == nil)) {
     self.view = nil;
-    //[self tearDownGL];
+    Application::instance().teardown();
     if ([EAGLContext currentContext] == self.context) {
       [EAGLContext setCurrentContext:nil];
     }
@@ -70,20 +72,18 @@
 }
 
 
+// Update the Application
 - (void)update
 {
-  // Update the Application
-  //self.timeSinceLastUpdate
+  Application::instance().update((float)self.timeSinceLastUpdate);
 }
 
+
+// Render an OpenGL Frame
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect
 {
-  // Render OpenGL
-  glClearColor(0.1f, 0.1f, 0.6f, 1.0f);
-  glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+  Application::instance().render();
 }
-
-
 
 
 @end

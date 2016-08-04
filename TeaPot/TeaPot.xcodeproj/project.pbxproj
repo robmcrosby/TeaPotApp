@@ -36,6 +36,7 @@
 		C182BCA51D53FEAB0035F4EC /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		C182BCA71D53FF8B0035F4EC /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
 		C182BCA81D53FF8B0035F4EC /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
+		C182BCAB1D5406C90035F4EC /* Vector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vector.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,13 +76,11 @@
 		C182BC7E1D53E8840035F4EC /* TeaPot */ = {
 			isa = PBXGroup;
 			children = (
-				C182BC821D53E8840035F4EC /* AppDelegate.h */,
-				C182BC831D53E8840035F4EC /* AppDelegate.mm */,
-				C182BC9C1D53EAAC0035F4EC /* ViewController.h */,
-				C182BC9D1D53EAAC0035F4EC /* ViewController.mm */,
-				C182BC7F1D53E8840035F4EC /* Supporting Files */,
 				C182BCA81D53FF8B0035F4EC /* Application.h */,
 				C182BCA71D53FF8B0035F4EC /* Application.cpp */,
+				C182BCAA1D5406340035F4EC /* Objective-C */,
+				C182BC7F1D53E8840035F4EC /* Supporting Files */,
+				C182BCAB1D5406C90035F4EC /* Vector.h */,
 			);
 			path = TeaPot;
 			sourceTree = "<group>";
@@ -96,6 +95,17 @@
 				C182BC801D53E8840035F4EC /* main.mm */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C182BCAA1D5406340035F4EC /* Objective-C */ = {
+			isa = PBXGroup;
+			children = (
+				C182BC821D53E8840035F4EC /* AppDelegate.h */,
+				C182BC831D53E8840035F4EC /* AppDelegate.mm */,
+				C182BC9C1D53EAAC0035F4EC /* ViewController.h */,
+				C182BC9D1D53EAAC0035F4EC /* ViewController.mm */,
+			);
+			name = "Objective-C";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

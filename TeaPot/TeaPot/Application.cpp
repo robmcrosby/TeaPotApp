@@ -8,6 +8,7 @@
 
 #include "Application.h"
 #include <OpenGLES/ES2/glext.h>
+#include "Vector.h"
 
 using namespace std;
 

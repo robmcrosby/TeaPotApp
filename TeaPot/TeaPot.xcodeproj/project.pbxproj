@@ -1,0 +1,320 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C182BC811D53E8840035F4EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C182BC801D53E8840035F4EC /* main.m */; };
+		C182BC841D53E8840035F4EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C182BC831D53E8840035F4EC /* AppDelegate.m */; };
+		C182BC861D53E8840035F4EC /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = C182BC851D53E8840035F4EC /* Shader.fsh */; };
+		C182BC881D53E8840035F4EC /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = C182BC871D53E8840035F4EC /* Shader.vsh */; };
+		C182BC8B1D53E8840035F4EC /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C182BC8A1D53E8840035F4EC /* GameViewController.m */; };
+		C182BC8E1D53E8840035F4EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C182BC8C1D53E8840035F4EC /* Main.storyboard */; };
+		C182BC901D53E8840035F4EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C182BC8F1D53E8840035F4EC /* Assets.xcassets */; };
+		C182BC931D53E8840035F4EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C182BC911D53E8840035F4EC /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C182BC7C1D53E8840035F4EC /* TeaPot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeaPot.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C182BC801D53E8840035F4EC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C182BC821D53E8840035F4EC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C182BC831D53E8840035F4EC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C182BC851D53E8840035F4EC /* Shader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.fsh; path = Shaders/Shader.fsh; sourceTree = "<group>"; };
+		C182BC871D53E8840035F4EC /* Shader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.vsh; path = Shaders/Shader.vsh; sourceTree = "<group>"; };
+		C182BC891D53E8840035F4EC /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		C182BC8A1D53E8840035F4EC /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		C182BC8D1D53E8840035F4EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C182BC8F1D53E8840035F4EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C182BC921D53E8840035F4EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C182BC941D53E8840035F4EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C182BC791D53E8830035F4EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C182BC731D53E8830035F4EC = {
+			isa = PBXGroup;
+			children = (
+				C182BC7E1D53E8840035F4EC /* TeaPot */,
+				C182BC7D1D53E8840035F4EC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C182BC7D1D53E8840035F4EC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C182BC7C1D53E8840035F4EC /* TeaPot.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C182BC7E1D53E8840035F4EC /* TeaPot */ = {
+			isa = PBXGroup;
+			children = (
+				C182BC821D53E8840035F4EC /* AppDelegate.h */,
+				C182BC831D53E8840035F4EC /* AppDelegate.m */,
+				C182BC851D53E8840035F4EC /* Shader.fsh */,
+				C182BC871D53E8840035F4EC /* Shader.vsh */,
+				C182BC891D53E8840035F4EC /* GameViewController.h */,
+				C182BC8A1D53E8840035F4EC /* GameViewController.m */,
+				C182BC8C1D53E8840035F4EC /* Main.storyboard */,
+				C182BC8F1D53E8840035F4EC /* Assets.xcassets */,
+				C182BC911D53E8840035F4EC /* LaunchScreen.storyboard */,
+				C182BC941D53E8840035F4EC /* Info.plist */,
+				C182BC7F1D53E8840035F4EC /* Supporting Files */,
+			);
+			path = TeaPot;
+			sourceTree = "<group>";
+		};
+		C182BC7F1D53E8840035F4EC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C182BC801D53E8840035F4EC /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C182BC7B1D53E8830035F4EC /* TeaPot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C182BC971D53E8840035F4EC /* Build configuration list for PBXNativeTarget "TeaPot" */;
+			buildPhases = (
+				C182BC781D53E8830035F4EC /* Sources */,
+				C182BC791D53E8830035F4EC /* Frameworks */,
+				C182BC7A1D53E8830035F4EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TeaPot;
+			productName = TeaPot;
+			productReference = C182BC7C1D53E8840035F4EC /* TeaPot.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C182BC741D53E8830035F4EC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Robert Crosby";
+				TargetAttributes = {
+					C182BC7B1D53E8830035F4EC = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = K62X7R9XCJ;
+					};
+				};
+			};
+			buildConfigurationList = C182BC771D53E8830035F4EC /* Build configuration list for PBXProject "TeaPot" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C182BC731D53E8830035F4EC;
+			productRefGroup = C182BC7D1D53E8840035F4EC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C182BC7B1D53E8830035F4EC /* TeaPot */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C182BC7A1D53E8830035F4EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C182BC8E1D53E8840035F4EC /* Main.storyboard in Resources */,
+				C182BC881D53E8840035F4EC /* Shader.vsh in Resources */,
+				C182BC901D53E8840035F4EC /* Assets.xcassets in Resources */,
+				C182BC931D53E8840035F4EC /* LaunchScreen.storyboard in Resources */,
+				C182BC861D53E8840035F4EC /* Shader.fsh in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C182BC781D53E8830035F4EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C182BC841D53E8840035F4EC /* AppDelegate.m in Sources */,
+				C182BC8B1D53E8840035F4EC /* GameViewController.m in Sources */,
+				C182BC811D53E8840035F4EC /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C182BC8C1D53E8840035F4EC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C182BC8D1D53E8840035F4EC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C182BC911D53E8840035F4EC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C182BC921D53E8840035F4EC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C182BC951D53E8840035F4EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C182BC961D53E8840035F4EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C182BC981D53E8840035F4EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = TeaPot/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.robmcrosby.TeaPot;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C182BC991D53E8840035F4EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = TeaPot/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.robmcrosby.TeaPot;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C182BC771D53E8830035F4EC /* Build configuration list for PBXProject "TeaPot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C182BC951D53E8840035F4EC /* Debug */,
+				C182BC961D53E8840035F4EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C182BC971D53E8840035F4EC /* Build configuration list for PBXNativeTarget "TeaPot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C182BC981D53E8840035F4EC /* Debug */,
+				C182BC991D53E8840035F4EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C182BC741D53E8830035F4EC /* Project object */;
+}

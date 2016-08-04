@@ -7,29 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C182BC811D53E8840035F4EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C182BC801D53E8840035F4EC /* main.m */; };
-		C182BC841D53E8840035F4EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C182BC831D53E8840035F4EC /* AppDelegate.m */; };
-		C182BC861D53E8840035F4EC /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = C182BC851D53E8840035F4EC /* Shader.fsh */; };
-		C182BC881D53E8840035F4EC /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = C182BC871D53E8840035F4EC /* Shader.vsh */; };
-		C182BC8B1D53E8840035F4EC /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C182BC8A1D53E8840035F4EC /* GameViewController.m */; };
+		C182BC811D53E8840035F4EC /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = C182BC801D53E8840035F4EC /* main.mm */; };
+		C182BC841D53E8840035F4EC /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = C182BC831D53E8840035F4EC /* AppDelegate.mm */; };
 		C182BC8E1D53E8840035F4EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C182BC8C1D53E8840035F4EC /* Main.storyboard */; };
 		C182BC901D53E8840035F4EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C182BC8F1D53E8840035F4EC /* Assets.xcassets */; };
 		C182BC931D53E8840035F4EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C182BC911D53E8840035F4EC /* LaunchScreen.storyboard */; };
+		C182BC9E1D53EAAC0035F4EC /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = C182BC9D1D53EAAC0035F4EC /* ViewController.mm */; };
+		C182BCA01D53FE810035F4EC /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C182BC9F1D53FE810035F4EC /* OpenGLES.framework */; };
+		C182BCA41D53FE960035F4EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C182BCA31D53FE960035F4EC /* UIKit.framework */; };
+		C182BCA61D53FEAB0035F4EC /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C182BCA51D53FEAB0035F4EC /* GLKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C182BC7C1D53E8840035F4EC /* TeaPot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeaPot.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C182BC801D53E8840035F4EC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C182BC801D53E8840035F4EC /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		C182BC821D53E8840035F4EC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		C182BC831D53E8840035F4EC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C182BC851D53E8840035F4EC /* Shader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.fsh; path = Shaders/Shader.fsh; sourceTree = "<group>"; };
-		C182BC871D53E8840035F4EC /* Shader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.vsh; path = Shaders/Shader.vsh; sourceTree = "<group>"; };
-		C182BC891D53E8840035F4EC /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
-		C182BC8A1D53E8840035F4EC /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		C182BC831D53E8840035F4EC /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
 		C182BC8D1D53E8840035F4EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C182BC8F1D53E8840035F4EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C182BC921D53E8840035F4EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C182BC941D53E8840035F4EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C182BC9C1D53EAAC0035F4EC /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C182BC9D1D53EAAC0035F4EC /* ViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		C182BC9F1D53FE810035F4EC /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		C182BCA11D53FE870035F4EC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C182BCA31D53FE960035F4EC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C182BCA51D53FEAB0035F4EC /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +40,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C182BCA61D53FEAB0035F4EC /* GLKit.framework in Frameworks */,
+				C182BCA41D53FE960035F4EC /* UIKit.framework in Frameworks */,
+				C182BCA01D53FE810035F4EC /* OpenGLES.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +52,10 @@
 		C182BC731D53E8830035F4EC = {
 			isa = PBXGroup;
 			children = (
+				C182BCA51D53FEAB0035F4EC /* GLKit.framework */,
+				C182BCA31D53FE960035F4EC /* UIKit.framework */,
+				C182BCA11D53FE870035F4EC /* QuartzCore.framework */,
+				C182BC9F1D53FE810035F4EC /* OpenGLES.framework */,
 				C182BC7E1D53E8840035F4EC /* TeaPot */,
 				C182BC7D1D53E8840035F4EC /* Products */,
 			);
@@ -63,15 +73,9 @@
 			isa = PBXGroup;
 			children = (
 				C182BC821D53E8840035F4EC /* AppDelegate.h */,
-				C182BC831D53E8840035F4EC /* AppDelegate.m */,
-				C182BC851D53E8840035F4EC /* Shader.fsh */,
-				C182BC871D53E8840035F4EC /* Shader.vsh */,
-				C182BC891D53E8840035F4EC /* GameViewController.h */,
-				C182BC8A1D53E8840035F4EC /* GameViewController.m */,
-				C182BC8C1D53E8840035F4EC /* Main.storyboard */,
-				C182BC8F1D53E8840035F4EC /* Assets.xcassets */,
-				C182BC911D53E8840035F4EC /* LaunchScreen.storyboard */,
-				C182BC941D53E8840035F4EC /* Info.plist */,
+				C182BC831D53E8840035F4EC /* AppDelegate.mm */,
+				C182BC9C1D53EAAC0035F4EC /* ViewController.h */,
+				C182BC9D1D53EAAC0035F4EC /* ViewController.mm */,
 				C182BC7F1D53E8840035F4EC /* Supporting Files */,
 			);
 			path = TeaPot;
@@ -80,7 +84,11 @@
 		C182BC7F1D53E8840035F4EC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				C182BC801D53E8840035F4EC /* main.m */,
+				C182BC8F1D53E8840035F4EC /* Assets.xcassets */,
+				C182BC8C1D53E8840035F4EC /* Main.storyboard */,
+				C182BC911D53E8840035F4EC /* LaunchScreen.storyboard */,
+				C182BC941D53E8840035F4EC /* Info.plist */,
+				C182BC801D53E8840035F4EC /* main.mm */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -144,10 +152,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C182BC8E1D53E8840035F4EC /* Main.storyboard in Resources */,
-				C182BC881D53E8840035F4EC /* Shader.vsh in Resources */,
 				C182BC901D53E8840035F4EC /* Assets.xcassets in Resources */,
 				C182BC931D53E8840035F4EC /* LaunchScreen.storyboard in Resources */,
-				C182BC861D53E8840035F4EC /* Shader.fsh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,9 +164,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C182BC841D53E8840035F4EC /* AppDelegate.m in Sources */,
-				C182BC8B1D53E8840035F4EC /* GameViewController.m in Sources */,
-				C182BC811D53E8840035F4EC /* main.m in Sources */,
+				C182BC841D53E8840035F4EC /* AppDelegate.mm in Sources */,
+				C182BC9E1D53EAAC0035F4EC /* ViewController.mm in Sources */,
+				C182BC811D53E8840035F4EC /* main.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

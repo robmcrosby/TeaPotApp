@@ -1,5 +1,5 @@
 //
-//  GameViewController.h
+//  ViewController.h
 //  TeaPot
 //
 //  Created by Robert Crosby on 8/4/16.
@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <GLKit/GLKit.h>
 
-@interface GameViewController : GLKViewController
+@interface ViewController : GLKViewController
 
 @end

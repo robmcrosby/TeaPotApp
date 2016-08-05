@@ -7,6 +7,7 @@
 //
 
 #include "Mesh.h"
+#include "Shader.h"
 
 using namespace std;
 
@@ -17,6 +18,25 @@ Mesh::Mesh(): mCount(0), mVertexArray(0) {
 
 Mesh::~Mesh() {
   
+}
+
+void Mesh::draw(const Shader &shader) const {
+  GLuint programId = shader.programId();
+  
+  glBindVertexArray(mVertexArray);
+  for (const auto &buffer : mVertexBuffers)
+  {
+    GLint index = glGetAttribLocation(programId, buffer.first.c_str());
+    if (index >= 0)
+    {
+      glBindBuffer(GL_ARRAY_BUFFER, buffer.second.bufferId);
+      glEnableVertexAttribArray(index);
+      glVertexAttribPointer(index, buffer.second.components, GL_FLOAT, GL_FALSE, 0, 0);
+    }
+  }
+  
+  glDrawArraysInstanced(GL_TRIANGLES, 0, mCount, 1);
+  glBindVertexArray(0);
 }
 
 bool Mesh::loadBufferMap(const BufferMap &bufferMap) {

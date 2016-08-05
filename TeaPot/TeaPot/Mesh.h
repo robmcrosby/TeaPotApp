@@ -15,6 +15,7 @@
 
 #include "GLIncludes.h"
 
+class Shader;
 
 struct Buffer {
   std::vector<float> data;
@@ -49,6 +50,8 @@ class Mesh {
 public:
   Mesh();
   ~Mesh();
+  
+  void draw(const Shader &shader) const;
   
   bool loadBufferMap(const BufferMap &bufferMap);
   void unload();

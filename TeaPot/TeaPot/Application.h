@@ -11,12 +11,14 @@
 
 #include <iostream>
 #include "Shader.h"
+#include "Mesh.h"
 
 /**
  * Singleton that controls the high level logic of the Application.
  */
 class Application {
   Shader mTeaPotShader;
+  Mesh mTeaPotMesh;
   
 private:
   Application() {}

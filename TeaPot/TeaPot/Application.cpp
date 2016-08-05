@@ -11,6 +11,12 @@
 
 using namespace std;
 
+const float buffer[] = {
+  -0.5f, -0.5f, 0.0f, 1.0f,
+   0.5f, -0.5f, 0.0f, 1.0f,
+   0.0f,  0.5f, 0.0f, 1.0f
+};
+
 
 Application& Application::instance() {
   static Application app;
@@ -19,6 +25,10 @@ Application& Application::instance() {
 
 void Application::setup() {
   mTeaPotShader.loadFiles("basic.vert", "basic.frag");
+  
+  BufferMap bufferMap;
+  bufferMap["position"] = Buffer(4, 3, buffer);
+  mTeaPotMesh.loadBufferMap(bufferMap);
   
   glEnable(GL_DEPTH_TEST);
 }

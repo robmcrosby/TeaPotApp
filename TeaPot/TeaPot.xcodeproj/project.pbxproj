@@ -21,6 +21,7 @@
 		C182BCB21D540B5B0035F4EC /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C182BCB01D540B5B0035F4EC /* Shader.cpp */; };
 		C182BCB71D54119A0035F4EC /* basic.vert in Resources */ = {isa = PBXBuildFile; fileRef = C182BCB61D54119A0035F4EC /* basic.vert */; };
 		C182BCB91D5411BE0035F4EC /* basic.frag in Resources */ = {isa = PBXBuildFile; fileRef = C182BCB81D5411BE0035F4EC /* basic.frag */; };
+		C182BCBC1D541F330035F4EC /* Mesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C182BCBA1D541F330035F4EC /* Mesh.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,8 @@
 		C182BCB11D540B5B0035F4EC /* Shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
 		C182BCB61D54119A0035F4EC /* basic.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = basic.vert; path = Shaders/basic.vert; sourceTree = "<group>"; };
 		C182BCB81D5411BE0035F4EC /* basic.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = basic.frag; path = Shaders/basic.frag; sourceTree = "<group>"; };
+		C182BCBA1D541F330035F4EC /* Mesh.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Mesh.cpp; sourceTree = "<group>"; };
+		C182BCBB1D541F330035F4EC /* Mesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mesh.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +93,8 @@
 				C182BCA71D53FF8B0035F4EC /* Application.cpp */,
 				C182BCB11D540B5B0035F4EC /* Shader.h */,
 				C182BCB01D540B5B0035F4EC /* Shader.cpp */,
+				C182BCBB1D541F330035F4EC /* Mesh.h */,
+				C182BCBA1D541F330035F4EC /* Mesh.cpp */,
 				C182BCB51D5411820035F4EC /* Shaders */,
 				C182BCAF1D540A820035F4EC /* Utilities */,
 				C182BCAA1D5406340035F4EC /* Objective-C */,
@@ -216,6 +221,7 @@
 				C182BCA91D53FF8B0035F4EC /* Application.cpp in Sources */,
 				C182BCAE1D5408A40035F4EC /* StringUtils.mm in Sources */,
 				C182BC841D53E8840035F4EC /* AppDelegate.mm in Sources */,
+				C182BCBC1D541F330035F4EC /* Mesh.cpp in Sources */,
 				C182BC9E1D53EAAC0035F4EC /* ViewController.mm in Sources */,
 				C182BCB21D540B5B0035F4EC /* Shader.cpp in Sources */,
 				C182BC811D53E8840035F4EC /* main.mm in Sources */,

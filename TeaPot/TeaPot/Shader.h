@@ -24,6 +24,16 @@ public:
   bool loadSrc(const std::string &vert, const std::string &frag);
   
   void unload();
+  
+private:
+  GLuint compilePart(const char *src, GLenum type);
+  void checkPart(GLuint partId, const char *src);
+  void deleteParts(GLuint *parts);
+  
+  void buildProgram(GLuint *parts);
+  void attachParts(GLuint *parts);
+  void detachParts(GLuint *parts);
+  void checkProgram();
 };
 
 

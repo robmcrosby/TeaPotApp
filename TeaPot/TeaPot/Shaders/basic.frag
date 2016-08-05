@@ -1,8 +1,8 @@
 #version 100
 
-//uniform mediump vec4 Color;
+uniform mediump vec4 color;
 
 void main() {
-  gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
-  //gl_FragColor = Color;
+  //gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
+  gl_FragColor = color;
 }

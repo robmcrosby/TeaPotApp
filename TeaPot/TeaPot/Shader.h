@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include "GLIncludes.h"
+#include "VectorUtils.h"
 
 
 class Shader {
@@ -22,6 +23,14 @@ public:
   
   void bind() const;
   GLuint programId() const;
+  
+  void setUniform(const std::string &name, const float &v) const;
+  void setUniform(const std::string &name, const float *v, GLint size) const;
+  
+  void setUniform(const std::string &name, const vec2 &v) const;
+  void setUniform(const std::string &name, const vec3 &v) const;
+  void setUniform(const std::string &name, const vec4 &v) const;
+  void setUniform(const std::string &name, const mat4 &m) const;
   
   bool loadFiles(const std::string &vert, const std::string &frag);
   bool loadSrc(const std::string &vert, const std::string &frag);

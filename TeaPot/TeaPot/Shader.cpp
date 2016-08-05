@@ -30,6 +30,45 @@ GLuint Shader::programId() const {
   return mProgramId;
 }
 
+void Shader::setUniform(const std::string &name, const float &v) const {
+  setUniform(name, &v, 1);
+}
+
+void Shader::setUniform(const std::string &name, const float *v, int size) const {
+  GLint loc = glGetUniformLocation(mProgramId, name.c_str());
+  if (loc >= 0) {
+    glUniform1fv(loc, (GLsizei)size, (const GLfloat*)v);
+  }
+}
+
+void Shader::setUniform(const std::string &name, const vec2 &v) const {
+  GLint loc = glGetUniformLocation(mProgramId, name.c_str());
+  if (loc >= 0) {
+    glUniform2fv(loc, 1, (const GLfloat*)v.ptr());
+  }
+}
+
+void Shader::setUniform(const std::string &name, const vec3 &v) const {
+  GLint loc = glGetUniformLocation(mProgramId, name.c_str());
+  if (loc >= 0) {
+    glUniform3fv(loc, 1, (const GLfloat*)v.ptr());
+  }
+}
+
+void Shader::setUniform(const std::string &name, const vec4 &v) const {
+  GLint loc = glGetUniformLocation(mProgramId, name.c_str());
+  if (loc >= 0) {
+    glUniform4fv(loc, 1, (const GLfloat*)v.ptr());
+  }
+}
+
+void Shader::setUniform(const std::string &name, const mat4 &m) const {
+  GLint loc = glGetUniformLocation(mProgramId, name.c_str());
+  if (loc >= 0) {
+    glUniformMatrix4fv(loc, 1, GL_FALSE, (const GLfloat*)m.ptr());
+  }
+}
+
 bool Shader::loadFiles(const std::string &vert, const std::string &frag) {
   string vSrc = StringUtils::ReadTextFile(vert);
   string fSrc = StringUtils::ReadTextFile(frag);

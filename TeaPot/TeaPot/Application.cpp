@@ -46,5 +46,6 @@ void Application::render() {
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
   
   mTeaPotShader.bind();
+  mTeaPotShader.setUniform("color", vec4(0.2f, 0.2f, 0.8f, 1.0f));
   mTeaPotMesh.draw(mTeaPotShader);
 }

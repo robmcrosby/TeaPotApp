@@ -7,6 +7,9 @@
 //
 
 #include "Shader.h"
+#include "StringUtils.h"
+
+using namespace std;
 
 
 Shader::Shader(): mProgramId(0) {
@@ -18,11 +21,15 @@ Shader::~Shader() {
 }
 
 bool Shader::loadFiles(const std::string &vert, const std::string &frag) {
-  return false;
+  string vSrc = StringUtils::ReadTextFile(vert);
+  string fSrc = StringUtils::ReadTextFile(frag);
+  return loadSrc(vSrc, fSrc);
 }
 
 bool Shader::loadSrc(const std::string &vert, const std::string &frag) {
-  return false;
+  cout << vert << endl;
+  cout << frag << endl;
+  return true;
 }
 
 void Shader::unload() {

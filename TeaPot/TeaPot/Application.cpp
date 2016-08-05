@@ -18,6 +18,8 @@ Application& Application::instance() {
 }
 
 void Application::setup() {
+  mTeaPotShader.loadFiles("basic.vert", "basic.frag");
+  
   glEnable(GL_DEPTH_TEST);
 }
 

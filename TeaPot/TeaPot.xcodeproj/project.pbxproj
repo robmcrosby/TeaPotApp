@@ -19,6 +19,8 @@
 		C182BCA91D53FF8B0035F4EC /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C182BCA71D53FF8B0035F4EC /* Application.cpp */; };
 		C182BCAE1D5408A40035F4EC /* StringUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = C182BCAD1D5408A40035F4EC /* StringUtils.mm */; };
 		C182BCB21D540B5B0035F4EC /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C182BCB01D540B5B0035F4EC /* Shader.cpp */; };
+		C182BCB71D54119A0035F4EC /* basic.vert in Resources */ = {isa = PBXBuildFile; fileRef = C182BCB61D54119A0035F4EC /* basic.vert */; };
+		C182BCB91D5411BE0035F4EC /* basic.frag in Resources */ = {isa = PBXBuildFile; fileRef = C182BCB81D5411BE0035F4EC /* basic.frag */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		C182BCAD1D5408A40035F4EC /* StringUtils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = StringUtils.mm; sourceTree = "<group>"; };
 		C182BCB01D540B5B0035F4EC /* Shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shader.cpp; sourceTree = "<group>"; };
 		C182BCB11D540B5B0035F4EC /* Shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
+		C182BCB61D54119A0035F4EC /* basic.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = basic.vert; path = Shaders/basic.vert; sourceTree = "<group>"; };
+		C182BCB81D5411BE0035F4EC /* basic.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = basic.frag; path = Shaders/basic.frag; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,7 @@
 				C182BCA71D53FF8B0035F4EC /* Application.cpp */,
 				C182BCB11D540B5B0035F4EC /* Shader.h */,
 				C182BCB01D540B5B0035F4EC /* Shader.cpp */,
+				C182BCB51D5411820035F4EC /* Shaders */,
 				C182BCAF1D540A820035F4EC /* Utilities */,
 				C182BCAA1D5406340035F4EC /* Objective-C */,
 				C182BC7F1D53E8840035F4EC /* Supporting Files */,
@@ -124,6 +129,15 @@
 				C182BCAD1D5408A40035F4EC /* StringUtils.mm */,
 			);
 			name = Utilities;
+			sourceTree = "<group>";
+		};
+		C182BCB51D5411820035F4EC /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				C182BCB61D54119A0035F4EC /* basic.vert */,
+				C182BCB81D5411BE0035F4EC /* basic.frag */,
+			);
+			name = Shaders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +201,8 @@
 				C182BC8E1D53E8840035F4EC /* Main.storyboard in Resources */,
 				C182BC901D53E8840035F4EC /* Assets.xcassets in Resources */,
 				C182BC931D53E8840035F4EC /* LaunchScreen.storyboard in Resources */,
+				C182BCB91D5411BE0035F4EC /* basic.frag in Resources */,
+				C182BCB71D54119A0035F4EC /* basic.vert in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

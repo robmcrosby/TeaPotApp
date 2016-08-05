@@ -10,12 +10,13 @@
 #define Application_hpp
 
 #include <iostream>
-
+#include "Shader.h"
 
 /**
  * Singleton that controls the high level logic of the Application.
  */
 class Application {
+  Shader mTeaPotShader;
   
 private:
   Application() {}

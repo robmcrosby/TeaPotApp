@@ -150,6 +150,8 @@ struct StringUtils
       return fileName.substr(loc+1);
     return "";
   }
+  
+  static std::string ReadTextFile(const std::string &filename);
 };
 
 #endif /* StringUtils_h */

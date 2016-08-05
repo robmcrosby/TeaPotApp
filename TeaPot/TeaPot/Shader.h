@@ -9,7 +9,7 @@
 #ifndef Shader_h
 #define Shader_h
 
-#include "StringUtils.h"
+#include <iostream>
 #include <OpenGLES/ES2/glext.h>
 
 

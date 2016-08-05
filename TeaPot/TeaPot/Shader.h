@@ -10,7 +10,7 @@
 #define Shader_h
 
 #include <iostream>
-#include <OpenGLES/ES2/glext.h>
+#include "GLIncludes.h"
 
 
 class Shader {

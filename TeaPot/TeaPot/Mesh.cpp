@@ -11,7 +11,7 @@
 using namespace std;
 
 
-Mesh::Mesh() {
+Mesh::Mesh(): mCount(0), mVertexArray(0) {
   
 }
 
@@ -19,10 +19,51 @@ Mesh::~Mesh() {
   
 }
 
-bool Mesh::loadBufferMap(BufferMap &bufferMap) {
-  return false;
+bool Mesh::loadBufferMap(const BufferMap &bufferMap) {
+  bool success = true;
+  unload();
+  
+  glGenVertexArrays(1, &mVertexArray);
+  glBindVertexArray(mVertexArray);
+  
+  for (const auto &buffer : bufferMap) {
+    success &= loadBuffer(buffer.first, buffer.second);
+  }
+  
+  return success;
+}
+
+bool Mesh::loadBuffer(const string &name, const Buffer &buffer) {
+  VertexBuffer vertBuf;
+  vertBuf.components = buffer.components;
+  
+  mCount = buffer.count();
+  
+  glGenBuffers(1, &vertBuf.bufferId);
+  if (!vertBuf.bufferId)
+  {
+    cerr << "Error Creating Vertex Buffer." << endl;
+    return false;
+  }
+  
+  GLsizeiptr size = vertBuf.components * mCount * sizeof(float);
+  const GLvoid *ptr = (const GLvoid*)buffer.ptr();
+  
+  glBindBuffer(GL_ARRAY_BUFFER, vertBuf.bufferId);
+  glBufferData(GL_ARRAY_BUFFER, size, ptr, GL_STATIC_DRAW);
+  glBindBuffer(GL_ARRAY_BUFFER, 0);
+  
+  mVertexBuffers[name] = vertBuf;
+  return true;
 }
 
 void Mesh::unload() {
+  glDeleteVertexArrays(1, &mVertexArray);
+  mVertexArray = 0;
   
+  for (auto &buffer : mVertexBuffers) {
+    glDeleteBuffers(1, &buffer.second.bufferId);
+  }
+  mVertexBuffers.clear();
+  mCount = 0;
 }

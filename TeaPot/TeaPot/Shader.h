@@ -20,6 +20,9 @@ public:
   Shader();
   ~Shader();
   
+  void bind() const;
+  GLuint programId() const;
+  
   bool loadFiles(const std::string &vert, const std::string &frag);
   bool loadSrc(const std::string &vert, const std::string &frag);
   

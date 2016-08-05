@@ -22,6 +22,14 @@ Shader::~Shader() {
   unload();
 }
 
+void Shader::bind() const {
+  glUseProgram(mProgramId);
+}
+
+GLuint Shader::programId() const {
+  return mProgramId;
+}
+
 bool Shader::loadFiles(const std::string &vert, const std::string &frag) {
   string vSrc = StringUtils::ReadTextFile(vert);
   string fSrc = StringUtils::ReadTextFile(frag);

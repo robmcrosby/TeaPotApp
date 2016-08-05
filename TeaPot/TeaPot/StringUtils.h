@@ -64,6 +64,12 @@ struct StringUtils
     return success;
   }
   
+  static std::string NameFromPath(const std::string &path) {
+    std::string name;
+    StringUtils::GetFileNameFromPath(path, name);
+    return name;
+  }
+  
   /**
    * Parses an intenger from the given string.
    *

@@ -12,7 +12,9 @@
 using namespace std;
 
 std::string StringUtils::ReadTextFile(const std::string &filename) {
-  NSString *filePath = [[NSBundle mainBundle] pathForResource:@"basic" ofType:@"vert"];
+  NSString *name = [NSString stringWithUTF8String:StringUtils::NameFromPath(filename).c_str()];
+  NSString *type = [NSString stringWithUTF8String:StringUtils::GetFilePostfix(filename).c_str()];
+  NSString *filePath = [[NSBundle mainBundle] pathForResource:name ofType:type];
   
   NSError *error = nil;
   NSString *contents = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:&error];

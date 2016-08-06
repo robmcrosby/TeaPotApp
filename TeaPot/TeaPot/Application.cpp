@@ -9,6 +9,7 @@
 #include "Application.h"
 #include "GLIncludes.h"
 #include "ObjLoader.h"
+#include "MeshUtils.h"
 
 using namespace std;
 
@@ -21,7 +22,7 @@ Application& Application::instance() {
 void Application::setup(float width, float height) {
   resize(width, height);
   
-  mTeaPotShader.loadFiles("basic.vert", "basic.frag");
+  mTeaPotShader.loadFiles("fracture.vert", "basic.frag");
   
   mCamera = vec3(10.0f, 10.0f, 10.0f);
   mCenter = vec3(0.0f, 0.0f, 0.0f);
@@ -29,6 +30,7 @@ void Application::setup(float width, float height) {
   
   BufferMap bufferMap;
   ObjLoader::loadFile("teapot.obj", bufferMap);
+  MeshUtils::addCenters(bufferMap, 15);
   mTeaPotMesh.loadBufferMap(bufferMap);
   mTeaPotModel = mat4::Scale(vec3(4.0f, 4.0f, 4.0f)) * mat4::Trans3d(vec3(0.0, -0.5, 0.0));
   

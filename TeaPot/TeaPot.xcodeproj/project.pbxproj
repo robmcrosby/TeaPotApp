@@ -25,6 +25,7 @@
 		C182BCC01D5574490035F4EC /* ObjLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C182BCBE1D5574490035F4EC /* ObjLoader.cpp */; };
 		C182BCC31D5575690035F4EC /* teapot.obj in Resources */ = {isa = PBXBuildFile; fileRef = C182BCC21D5575690035F4EC /* teapot.obj */; };
 		C182BCC51D5576010035F4EC /* plane.obj in Resources */ = {isa = PBXBuildFile; fileRef = C182BCC41D5576010035F4EC /* plane.obj */; };
+		C182BCC81D5667E80035F4EC /* fracture.vert in Resources */ = {isa = PBXBuildFile; fileRef = C182BCC71D5667E80035F4EC /* fracture.vert */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,8 @@
 		C182BCBF1D5574490035F4EC /* ObjLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjLoader.h; sourceTree = "<group>"; };
 		C182BCC21D5575690035F4EC /* teapot.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = teapot.obj; path = Meshes/teapot.obj; sourceTree = "<group>"; };
 		C182BCC41D5576010035F4EC /* plane.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = plane.obj; path = Meshes/plane.obj; sourceTree = "<group>"; };
+		C182BCC61D565F820035F4EC /* MeshUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeshUtils.h; sourceTree = "<group>"; };
+		C182BCC71D5667E80035F4EC /* fracture.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = fracture.vert; path = Shaders/fracture.vert; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +147,7 @@
 				C182BCAB1D5406C90035F4EC /* VectorUtils.h */,
 				C182BCAC1D5408340035F4EC /* StringUtils.h */,
 				C182BCAD1D5408A40035F4EC /* StringUtils.mm */,
+				C182BCC61D565F820035F4EC /* MeshUtils.h */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -153,6 +157,7 @@
 			children = (
 				C182BCB61D54119A0035F4EC /* basic.vert */,
 				C182BCB81D5411BE0035F4EC /* basic.frag */,
+				C182BCC71D5667E80035F4EC /* fracture.vert */,
 			);
 			name = Shaders;
 			sourceTree = "<group>";
@@ -224,6 +229,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C182BCC81D5667E80035F4EC /* fracture.vert in Resources */,
 				C182BC8E1D53E8840035F4EC /* Main.storyboard in Resources */,
 				C182BC901D53E8840035F4EC /* Assets.xcassets in Resources */,
 				C182BCC51D5576010035F4EC /* plane.obj in Resources */,

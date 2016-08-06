@@ -7,9 +7,14 @@ uniform mat4 projection;
 uniform mat4 view;
 uniform mat4 model;
 
+uniform vec3 camera;
+
 varying vec3 v_normal;
+varying vec3 v_camera;
 
 void main() {
-  gl_Position = projection * view * model * position;
+  vec4 pos = model * position;
+  gl_Position = projection * view * pos;
   v_normal = normal.xyz;
+  v_camera = camera - pos.xyz;
 }

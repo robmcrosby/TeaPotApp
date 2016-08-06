@@ -19,6 +19,8 @@
 class Application {
   vec2 mWindowSize;
   
+  vec3 mCamera;
+  vec3 mCenter;
   mat4 mProjection;
   mat4 mView;
   

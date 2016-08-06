@@ -23,9 +23,9 @@ void Application::setup(float width, float height) {
   
   mTeaPotShader.loadFiles("basic.vert", "basic.frag");
   
-  mView = mat4::LookAt(vec3(10.0f, 10.0f, 10.0f),
-                       vec3(0.0f, 0.0f, 0.0f),
-                       vec3(0.0f, 1.0f, 0.0f));
+  mCamera = vec3(10.0f, 10.0f, 10.0f);
+  mCenter = vec3(0.0f, 0.0f, 0.0f);
+  mView = mat4::LookAt(mCamera, mCenter, vec3(0.0f, 1.0f, 0.0f));
   
   BufferMap bufferMap;
   ObjLoader::loadFile("teapot.obj", bufferMap);
@@ -52,6 +52,7 @@ void Application::render() {
   mTeaPotShader.setUniform("projection", mProjection);
   mTeaPotShader.setUniform("view", mView);
   mTeaPotShader.setUniform("model", mTeaPotModel);
+  mTeaPotShader.setUniform("camera", mCamera);
   mTeaPotMesh.draw(mTeaPotShader);
 }
 

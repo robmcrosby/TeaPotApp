@@ -8,14 +8,9 @@
 
 #include "Application.h"
 #include "GLIncludes.h"
+#include "ObjLoader.h"
 
 using namespace std;
-
-const float buffer[] = {
-  -0.5f, -0.5f, 0.0f, 1.0f,
-   0.5f, -0.5f, 0.0f, 1.0f,
-   0.0f,  0.5f, 0.0f, 1.0f
-};
 
 
 Application& Application::instance() {
@@ -27,7 +22,7 @@ void Application::setup() {
   mTeaPotShader.loadFiles("basic.vert", "basic.frag");
   
   BufferMap bufferMap;
-  bufferMap["position"] = Buffer(4, 3, buffer);
+  ObjLoader::loadFile("teapot.obj", bufferMap);
   mTeaPotMesh.loadBufferMap(bufferMap);
   
   glEnable(GL_DEPTH_TEST);

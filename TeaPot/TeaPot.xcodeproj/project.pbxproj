@@ -22,6 +22,9 @@
 		C182BCB71D54119A0035F4EC /* basic.vert in Resources */ = {isa = PBXBuildFile; fileRef = C182BCB61D54119A0035F4EC /* basic.vert */; };
 		C182BCB91D5411BE0035F4EC /* basic.frag in Resources */ = {isa = PBXBuildFile; fileRef = C182BCB81D5411BE0035F4EC /* basic.frag */; };
 		C182BCBC1D541F330035F4EC /* Mesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C182BCBA1D541F330035F4EC /* Mesh.cpp */; };
+		C182BCC01D5574490035F4EC /* ObjLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C182BCBE1D5574490035F4EC /* ObjLoader.cpp */; };
+		C182BCC31D5575690035F4EC /* teapot.obj in Resources */ = {isa = PBXBuildFile; fileRef = C182BCC21D5575690035F4EC /* teapot.obj */; };
+		C182BCC51D5576010035F4EC /* plane.obj in Resources */ = {isa = PBXBuildFile; fileRef = C182BCC41D5576010035F4EC /* plane.obj */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +54,10 @@
 		C182BCBA1D541F330035F4EC /* Mesh.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Mesh.cpp; sourceTree = "<group>"; };
 		C182BCBB1D541F330035F4EC /* Mesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mesh.h; sourceTree = "<group>"; };
 		C182BCBD1D542D230035F4EC /* GLIncludes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLIncludes.h; sourceTree = "<group>"; };
+		C182BCBE1D5574490035F4EC /* ObjLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ObjLoader.cpp; sourceTree = "<group>"; };
+		C182BCBF1D5574490035F4EC /* ObjLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjLoader.h; sourceTree = "<group>"; };
+		C182BCC21D5575690035F4EC /* teapot.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = teapot.obj; path = Meshes/teapot.obj; sourceTree = "<group>"; };
+		C182BCC41D5576010035F4EC /* plane.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = plane.obj; path = Meshes/plane.obj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +104,9 @@
 				C182BCB01D540B5B0035F4EC /* Shader.cpp */,
 				C182BCBB1D541F330035F4EC /* Mesh.h */,
 				C182BCBA1D541F330035F4EC /* Mesh.cpp */,
+				C182BCBF1D5574490035F4EC /* ObjLoader.h */,
+				C182BCBE1D5574490035F4EC /* ObjLoader.cpp */,
+				C182BCC11D5575240035F4EC /* Meshes */,
 				C182BCB51D5411820035F4EC /* Shaders */,
 				C182BCAF1D540A820035F4EC /* Utilities */,
 				C182BCAA1D5406340035F4EC /* Objective-C */,
@@ -145,6 +155,15 @@
 				C182BCB81D5411BE0035F4EC /* basic.frag */,
 			);
 			name = Shaders;
+			sourceTree = "<group>";
+		};
+		C182BCC11D5575240035F4EC /* Meshes */ = {
+			isa = PBXGroup;
+			children = (
+				C182BCC41D5576010035F4EC /* plane.obj */,
+				C182BCC21D5575690035F4EC /* teapot.obj */,
+			);
+			name = Meshes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +226,8 @@
 			files = (
 				C182BC8E1D53E8840035F4EC /* Main.storyboard in Resources */,
 				C182BC901D53E8840035F4EC /* Assets.xcassets in Resources */,
+				C182BCC51D5576010035F4EC /* plane.obj in Resources */,
+				C182BCC31D5575690035F4EC /* teapot.obj in Resources */,
 				C182BC931D53E8840035F4EC /* LaunchScreen.storyboard in Resources */,
 				C182BCB91D5411BE0035F4EC /* basic.frag in Resources */,
 				C182BCB71D54119A0035F4EC /* basic.vert in Resources */,
@@ -220,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C182BCC01D5574490035F4EC /* ObjLoader.cpp in Sources */,
 				C182BCA91D53FF8B0035F4EC /* Application.cpp in Sources */,
 				C182BCAE1D5408A40035F4EC /* StringUtils.mm in Sources */,
 				C182BC841D53E8840035F4EC /* AppDelegate.mm in Sources */,

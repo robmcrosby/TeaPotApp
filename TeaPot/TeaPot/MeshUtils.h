@@ -41,6 +41,33 @@ struct MeshUtils {
     pack(buffers["center"], centers, 1.0);
   }
   
+  static void addCenters(BufferMap &buffers, int min, int max) {
+    std::vector<vec3> positions;
+    std::vector<vec3> centers;
+    int index = 0;
+    
+    extract(buffers["position"], positions);
+    
+    while (index < (int)positions.size()) {
+      int group = random(min, max)*3;
+      int count = 1;
+      
+      // Iterate the group to find the average position
+      vec3 avg = positions[index];
+      while (++index < (int)positions.size() && ++count < group) {
+        avg += positions[index];
+      }
+      avg /= (float)count;
+      
+      // Add the average position as centers
+      for (int j = 0; j < group; ++j) {
+        centers.push_back(avg);
+      }
+    }
+    
+    pack(buffers["center"], centers, 1.0);
+  }
+  
   static void extract(const Buffer &buffer, std::vector<vec3> &array) {
     const std::vector<float> &data = buffer.data;
     
@@ -60,6 +87,10 @@ struct MeshUtils {
       buffer.data.push_back(v.z);
       buffer.data.push_back(w);
     }
+  }
+  
+  static int random(int min, int max) {
+    return min + (int)((max-min)*(float)rand()/(float)RAND_MAX);
   }
 };
 

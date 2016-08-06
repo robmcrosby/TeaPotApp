@@ -30,7 +30,7 @@ void Application::setup(float width, float height) {
   
   BufferMap bufferMap;
   ObjLoader::loadFile("teapot.obj", bufferMap);
-  MeshUtils::addCenters(bufferMap, 15);
+  MeshUtils::addCenters(bufferMap, 1, 16);
   mTeaPotMesh.loadBufferMap(bufferMap);
   mTeaPotModel = mat4::Scale(vec3(4.0f, 4.0f, 4.0f)) * mat4::Trans3d(vec3(0.0, -0.5, 0.0));
   

@@ -17,8 +17,14 @@
  * Singleton that controls the high level logic of the Application.
  */
 class Application {
+  vec2 mWindowSize;
+  
+  mat4 mProjection;
+  mat4 mView;
+  
   Shader mTeaPotShader;
   Mesh mTeaPotMesh;
+  mat4 mTeaPotModel;
   
 private:
   Application() {}
@@ -29,11 +35,12 @@ private:
 public:
   static Application& instance();
   
-  void setup();
+  void setup(float width, float height);
   void teardown();
   
   void update(float time);
   void render();
+  void resize(float width, float height);
 };
 
 

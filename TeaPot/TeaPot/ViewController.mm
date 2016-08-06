@@ -37,7 +37,18 @@
   view.drawableDepthFormat = GLKViewDrawableDepthFormat24;
   
   [EAGLContext setCurrentContext:self.context];
-  Application::instance().setup();
+  
+  float width = (float)view.frame.size.width;
+  float height = (float)view.frame.size.height;
+  Application::instance().setup(width, height);
+}
+
+// Change of Device Rotation
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
+{
+  float width = (float)size.width;
+  float height = (float)size.height;
+  Application::instance().resize(width, height);
 }
 
 

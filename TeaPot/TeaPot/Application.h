@@ -42,7 +42,10 @@ public:
   
   void update(float time);
   void render();
+  
   void resize(float width, float height);
+  
+  void touchDown(float x, float y);
 };
 
 

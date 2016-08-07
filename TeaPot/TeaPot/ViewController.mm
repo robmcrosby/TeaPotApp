@@ -97,4 +97,11 @@
 }
 
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+  UITouch *touch = [touches anyObject];
+  CGPoint position = [touch locationInView:self.view];
+  Application::instance().touchDown((float)position.x, (float)position.y);
+}
+
 @end

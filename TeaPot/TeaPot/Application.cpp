@@ -70,3 +70,7 @@ void Application::resize(float width, float height) {
   
   mProjection = mat4::Frustum(-width, width, -height, height, near, far);
 }
+
+void Application::touchDown(float x, float y) {
+  cout << "Touch Down: " << x << ", " << y << endl;
+}

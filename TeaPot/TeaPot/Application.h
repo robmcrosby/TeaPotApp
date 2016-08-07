@@ -21,6 +21,8 @@ class Application {
   
   vec3 mCamera;
   vec3 mCenter;
+  float mDistance;
+  
   mat4 mProjection;
   mat4 mView;
   
@@ -46,6 +48,7 @@ public:
   void resize(float width, float height);
   
   void touchDown(float x, float y);
+  void handleMotion(float x, float y, float z, float w);
 };
 
 

@@ -10,8 +10,11 @@
 #import <OpenGLES/ES2/glext.h>
 
 #import "Application.h"
+#import <CoreMotion/CoreMotion.h>
 
-@interface ViewController () {}
+@interface ViewController () {
+  CMMotionManager *mMotionManager;
+}
 @property (strong, nonatomic) EAGLContext *context;
 @end
 
@@ -41,6 +44,8 @@
   float width = (float)view.frame.size.width;
   float height = (float)view.frame.size.height;
   Application::instance().setup(width, height);
+  
+  [self setupMotion];
 }
 
 // Change of Device Rotation
@@ -102,6 +107,27 @@
   UITouch *touch = [touches anyObject];
   CGPoint position = [touch locationInView:self.view];
   Application::instance().touchDown((float)position.x, (float)position.y);
+}
+
+- (void)handleMotion: (CMDeviceMotion *)motion
+{
+  CMQuaternion quat = motion.attitude.quaternion;
+  Application::instance().handleMotion((float)quat.x,
+                                       (float)quat.y,
+                                       (float)quat.z,
+                                       (float)quat.w);
+}
+
+- (void)setupMotion
+{
+  mMotionManager = [[CMMotionManager alloc] init];
+  if (mMotionManager.deviceMotionAvailable) {
+    mMotionManager.deviceMotionUpdateInterval = 1.0/60.0;
+    [mMotionManager startDeviceMotionUpdatesToQueue:[NSOperationQueue currentQueue]
+                                        withHandler:^(CMDeviceMotion *motion, NSError *error) {
+                                          [self handleMotion: motion];
+                                        }];
+  }
 }
 
 @end

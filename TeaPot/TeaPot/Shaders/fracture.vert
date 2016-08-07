@@ -17,7 +17,7 @@ void main() {
   vec4 pos = model * position;
   vec4 cen = model * center;
   
-  pos += vec4(normalize(cen.xyz)*2.0, 0.0);
+  pos += vec4(normalize(cen.xyz)*0.1, 0.0);
   
   gl_Position = projection * view * pos;
   v_normal = normal.xyz;

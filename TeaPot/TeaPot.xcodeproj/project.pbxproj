@@ -26,6 +26,7 @@
 		C182BCC31D5575690035F4EC /* teapot.obj in Resources */ = {isa = PBXBuildFile; fileRef = C182BCC21D5575690035F4EC /* teapot.obj */; };
 		C182BCC51D5576010035F4EC /* plane.obj in Resources */ = {isa = PBXBuildFile; fileRef = C182BCC41D5576010035F4EC /* plane.obj */; };
 		C182BCC81D5667E80035F4EC /* fracture.vert in Resources */ = {isa = PBXBuildFile; fileRef = C182BCC71D5667E80035F4EC /* fracture.vert */; };
+		C182BCCA1D57AA140035F4EC /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C182BCC91D57AA140035F4EC /* CoreMotion.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		C182BCC41D5576010035F4EC /* plane.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = plane.obj; path = Meshes/plane.obj; sourceTree = "<group>"; };
 		C182BCC61D565F820035F4EC /* MeshUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeshUtils.h; sourceTree = "<group>"; };
 		C182BCC71D5667E80035F4EC /* fracture.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = fracture.vert; path = Shaders/fracture.vert; sourceTree = "<group>"; };
+		C182BCC91D57AA140035F4EC /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C182BCCA1D57AA140035F4EC /* CoreMotion.framework in Frameworks */,
 				C182BCA61D53FEAB0035F4EC /* GLKit.framework in Frameworks */,
 				C182BCA41D53FE960035F4EC /* UIKit.framework in Frameworks */,
 				C182BCA01D53FE810035F4EC /* OpenGLES.framework in Frameworks */,
@@ -80,6 +83,7 @@
 		C182BC731D53E8830035F4EC = {
 			isa = PBXGroup;
 			children = (
+				C182BCC91D57AA140035F4EC /* CoreMotion.framework */,
 				C182BCA51D53FEAB0035F4EC /* GLKit.framework */,
 				C182BCA31D53FE960035F4EC /* UIKit.framework */,
 				C182BCA11D53FE870035F4EC /* QuartzCore.framework */,

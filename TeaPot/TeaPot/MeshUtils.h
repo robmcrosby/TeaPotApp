@@ -17,8 +17,6 @@ struct MeshUtils {
     std::vector<vec3> positions;
     std::vector<vec3> centers;
     
-    groups *= 3;
-    
     extract(buffers["position"], positions);
     
     for (int i = 0; i < (int)positions.size()/groups; ++i) {

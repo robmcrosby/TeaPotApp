@@ -6,7 +6,7 @@ varying mediump vec3 v_normal;
 varying mediump vec3 v_camera;
 
 void main() {
-  mediump vec3 light = vec3(0.0, 1.0, 0.0);
+  mediump vec3 light = vec3(0.0, 0.0, 1.0);
   mediump vec3 normal = normalize(v_normal);
   mediump vec3 ref = normalize(-reflect(light, normal));
   mediump vec3 camera = normalize(v_camera);

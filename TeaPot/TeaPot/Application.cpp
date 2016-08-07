@@ -24,15 +24,17 @@ void Application::setup(float width, float height) {
   
   mTeaPotShader.loadFiles("fracture.vert", "basic.frag");
   
-  mCamera = vec3(10.0f, 10.0f, 10.0f);
+  mDistance = 32.0f;
   mCenter = vec3(0.0f, 0.0f, 0.0f);
-  mView = mat4::LookAt(mCamera, mCenter, vec3(0.0f, 1.0f, 0.0f));
+  mCamera = mCenter + vec3(1.0f, 1.0f, 1.0f).normalized() * mDistance;
+  mView = mat4::LookAt(mCamera, mCenter, vec3(0.0f, 0.0f, 1.0f));
   
   BufferMap bufferMap;
   ObjLoader::loadFile("teapot.obj", bufferMap);
-  MeshUtils::addCenters(bufferMap, 1, 16);
+  //MeshUtils::addCenters(bufferMap, 1, 16);
+  MeshUtils::addCenters(bufferMap, 6);
   mTeaPotMesh.loadBufferMap(bufferMap);
-  mTeaPotModel = mat4::Scale(vec3(4.0f, 4.0f, 4.0f)) * mat4::Trans3d(vec3(0.0, -0.5, 0.0));
+  mTeaPotModel = mat4::RotX(Pi/2.0f) * mat4::Scale(vec3(4.0f, 4.0f, 4.0f)) * mat4::Trans3d(vec3(0.0, -0.5, 0.0));
   
   glEnable(GL_DEPTH_TEST);
 }
@@ -73,4 +75,12 @@ void Application::resize(float width, float height) {
 
 void Application::touchDown(float x, float y) {
   cout << "Touch Down: " << x << ", " << y << endl;
+}
+
+void Application::handleMotion(float x, float y, float z, float w) {
+  quat rot(x, y, z, w);
+  vec3 up  = rot * vec3(0.0, 1.0, 0.0);
+  
+  mCamera = mCenter + rot * vec3(0.0, 0.0, 1.0) * mDistance;
+  mView = mat4::LookAt(mCamera, mCenter, up);
 }

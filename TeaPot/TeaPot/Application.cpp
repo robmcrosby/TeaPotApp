@@ -34,7 +34,8 @@ void Application::setup(float width, float height) {
   //MeshUtils::addCenters(bufferMap, 1, 16);
   MeshUtils::addCenters(bufferMap, 6);
   mTeaPotMesh.loadBufferMap(bufferMap);
-  mTeaPotModel = mat4::RotX(Pi/2.0f) * mat4::Scale(vec3(4.0f, 4.0f, 4.0f)) * mat4::Trans3d(vec3(0.0, -0.5, 0.0));
+  mTeaPotRotation = quat(vec3(1.0f, 0.0f, 0.0f), Pi/2.0f);
+  mTeaPotModel = mTeaPotRotation.toMat4() * mat4::Scale(vec3(4.0f, 4.0f, 4.0f)) * mat4::Trans3d(vec3(0.0, -0.5, 0.0));
   
   glEnable(GL_DEPTH_TEST);
 }
@@ -56,6 +57,7 @@ void Application::render() {
   mTeaPotShader.setUniform("projection", mProjection);
   mTeaPotShader.setUniform("view", mView);
   mTeaPotShader.setUniform("model", mTeaPotModel);
+  mTeaPotShader.setUniform("rotation", mTeaPotRotation.toVec4());
   mTeaPotShader.setUniform("camera", mCamera);
   mTeaPotMesh.draw(mTeaPotShader);
 }

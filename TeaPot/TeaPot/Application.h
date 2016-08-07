@@ -29,6 +29,7 @@ class Application {
   Shader mTeaPotShader;
   Mesh mTeaPotMesh;
   mat4 mTeaPotModel;
+  quat mTeaPotRotation;
   
 private:
   Application() {}

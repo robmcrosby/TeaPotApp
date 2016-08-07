@@ -11,6 +11,8 @@ uniform vec4 rotation;
 
 uniform vec3 camera;
 
+uniform vec4 explosion;
+
 varying vec3 v_normal;
 varying vec3 v_camera;
 
@@ -20,7 +22,7 @@ void main() {
   vec4 pos = model * position;
   vec4 cen = model * center;
   
-  pos += vec4(normalize(cen.xyz)*0.1, 0.0);
+  pos += vec4(normalize(cen.xyz - explosion.xyz)*explosion.w, 0.0);
   
   gl_Position = projection * view * pos;
   v_normal = rotate(rotation, normal.xyz);

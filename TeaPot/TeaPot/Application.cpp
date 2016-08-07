@@ -37,6 +37,8 @@ void Application::setup(float width, float height) {
   mTeaPotRotation = quat(vec3(1.0f, 0.0f, 0.0f), Pi/2.0f);
   mTeaPotModel = mTeaPotRotation.toMat4() * mat4::Scale(vec3(4.0f, 4.0f, 4.0f)) * mat4::Trans3d(vec3(0.0, -0.5, 0.0));
   
+  mExplosion.w = 1.0f;
+  
   glEnable(GL_DEPTH_TEST);
 }
 
@@ -45,7 +47,27 @@ void Application::teardown() {
 }
 
 void Application::update(float time) {
-  
+  switch (mState) {
+    case DEFAULT:
+      mExplosion.w = 0.0;
+      break;
+    case EXPLODING:
+      mExplosion.w += 2.0f * time;
+      if (mExplosion.w > 4.0f) {
+        mExplosion.w = 4.0f;
+        mState = IMPLODING;
+      }
+      break;
+    case IMPLODING:
+      mExplosion.w -= 2.0f * time;
+      if (mExplosion.w < 0.0f) {
+        mExplosion.w = 0.0f;
+        mState = DEFAULT;
+      }
+      break;
+    default:
+      break;
+  }
 }
 
 void Application::render() {
@@ -59,6 +81,7 @@ void Application::render() {
   mTeaPotShader.setUniform("model", mTeaPotModel);
   mTeaPotShader.setUniform("rotation", mTeaPotRotation.toVec4());
   mTeaPotShader.setUniform("camera", mCamera);
+  mTeaPotShader.setUniform("explosion", mExplosion);
   mTeaPotMesh.draw(mTeaPotShader);
 }
 
@@ -76,7 +99,25 @@ void Application::resize(float width, float height) {
 }
 
 void Application::touchDown(float x, float y) {
-  cout << "Touch Down: " << x << ", " << y << endl;
+  switch (mState) {
+    case DEFAULT:
+      mState = EXPLODING;
+      break;
+    case EXPLODING:
+      mState = PAUSED_EXP;
+      break;
+    case IMPLODING:
+      mState = PAUSED_IMP;
+      break;
+    case PAUSED_EXP:
+      mState = EXPLODING;
+      break;
+    case PAUSED_IMP:
+      mState = IMPLODING;
+      break;
+    default:
+      break;
+  }
 }
 
 void Application::handleMotion(float x, float y, float z, float w) {

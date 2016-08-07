@@ -13,6 +13,14 @@
 #include "Shader.h"
 #include "Mesh.h"
 
+enum APP_STATE {
+  DEFAULT,
+  EXPLODING,
+  IMPLODING,
+  PAUSED_EXP,
+  PAUSED_IMP,
+};
+
 /**
  * Singleton that controls the high level logic of the Application.
  */
@@ -31,8 +39,11 @@ class Application {
   mat4 mTeaPotModel;
   quat mTeaPotRotation;
   
+  vec4 mExplosion;
+  APP_STATE mState;
+  
 private:
-  Application() {}
+  Application(): mState(DEFAULT) {}
   Application(const Application&) {}
   ~Application() {}
   Application& operator=(const Application&) {return *this;}

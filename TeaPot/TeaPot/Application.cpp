@@ -22,17 +22,16 @@ Application& Application::instance() {
 void Application::setup(float width, float height) {
   resize(width, height);
   
-  mTeaPotShader.loadFiles("fracture.vert", "basic.frag");
+  mTeaPotShader.loadFiles("physics.vert", "basic.frag");
   
-  mDistance = 32.0f;
+  mDistance = 16.0f;
   mCenter = vec3(0.0f, 0.0f, 0.0f);
   mCamera = mCenter + vec3(1.0f, 1.0f, 1.0f).normalized() * mDistance;
   mView = mat4::LookAt(mCamera, mCenter, vec3(0.0f, 0.0f, 1.0f));
   
   BufferMap bufferMap;
   ObjLoader::loadFile("teapot.obj", bufferMap);
-  //MeshUtils::addCenters(bufferMap, 1, 16);
-  MeshUtils::addCenters(bufferMap, 6);
+  MeshUtils::addCenters(bufferMap, 3);
   mTeaPotMesh.loadBufferMap(bufferMap);
   mTeaPotRotation = quat(vec3(1.0f, 0.0f, 0.0f), Pi/2.0f);
   mTeaPotModel = mTeaPotRotation.toMat4() * mat4::Scale(vec3(4.0f, 4.0f, 4.0f)) * mat4::Trans3d(vec3(0.0, -0.5, 0.0));
@@ -101,7 +100,7 @@ void Application::resize(float width, float height) {
 void Application::touchDown(float x, float y) {
   switch (mState) {
     case DEFAULT:
-      mState = EXPLODING;
+      startExplosion(vec2(x, y));
       break;
     case EXPLODING:
       mState = PAUSED_EXP;
@@ -126,4 +125,23 @@ void Application::handleMotion(float x, float y, float z, float w) {
   
   mCamera = mCenter + rot * vec3(0.0, 0.0, 1.0) * mDistance;
   mView = mat4::LookAt(mCamera, mCenter, up);
+}
+
+void Application::startExplosion(vec2 touch) {
+  touch /= mWindowSize;
+  touch.y = (1.0f - touch.y);
+  touch = touch*8.0f - vec2(4.0f, 4.0f);
+  touch.y *= mWindowSize.h/mWindowSize.w;
+  
+  cout << touch << endl;
+  
+  mat4 proj = mProjection * mView;
+  vec4 center = proj * vec4(0.0, 0.0, 0.0, 1.0);
+  center.x = touch.x;
+  center.y = touch.y;
+  center = proj.inverse() * center;
+  center.w = 0;
+  
+  mExplosion = center;
+  mState = EXPLODING;
 }

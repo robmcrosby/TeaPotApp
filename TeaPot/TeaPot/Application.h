@@ -61,6 +61,9 @@ public:
   
   void touchDown(float x, float y);
   void handleMotion(float x, float y, float z, float w);
+  
+private:
+  void startExplosion(vec2 touch);
 };
 
 

@@ -27,6 +27,7 @@
 		C182BCC51D5576010035F4EC /* plane.obj in Resources */ = {isa = PBXBuildFile; fileRef = C182BCC41D5576010035F4EC /* plane.obj */; };
 		C182BCC81D5667E80035F4EC /* fracture.vert in Resources */ = {isa = PBXBuildFile; fileRef = C182BCC71D5667E80035F4EC /* fracture.vert */; };
 		C182BCCA1D57AA140035F4EC /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C182BCC91D57AA140035F4EC /* CoreMotion.framework */; };
+		C182BCCC1D57F60A0035F4EC /* physics.vert in Resources */ = {isa = PBXBuildFile; fileRef = C182BCCB1D57F60A0035F4EC /* physics.vert */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		C182BCC61D565F820035F4EC /* MeshUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeshUtils.h; sourceTree = "<group>"; };
 		C182BCC71D5667E80035F4EC /* fracture.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = fracture.vert; path = Shaders/fracture.vert; sourceTree = "<group>"; };
 		C182BCC91D57AA140035F4EC /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		C182BCCB1D57F60A0035F4EC /* physics.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = physics.vert; path = Shaders/physics.vert; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 				C182BCB61D54119A0035F4EC /* basic.vert */,
 				C182BCB81D5411BE0035F4EC /* basic.frag */,
 				C182BCC71D5667E80035F4EC /* fracture.vert */,
+				C182BCCB1D57F60A0035F4EC /* physics.vert */,
 			);
 			name = Shaders;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C182BCC81D5667E80035F4EC /* fracture.vert in Resources */,
+				C182BCCC1D57F60A0035F4EC /* physics.vert in Resources */,
 				C182BC8E1D53E8840035F4EC /* Main.storyboard in Resources */,
 				C182BC901D53E8840035F4EC /* Assets.xcassets in Resources */,
 				C182BCC51D5576010035F4EC /* plane.obj in Resources */,

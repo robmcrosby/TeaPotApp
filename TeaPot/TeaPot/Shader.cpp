@@ -69,6 +69,13 @@ void Shader::setUniform(const std::string &name, const mat4 &m) const {
   }
 }
 
+void Shader::setUniforms(const std::string &name, const mat4 *m, int count) const {
+  GLint loc = glGetUniformLocation(mProgramId, name.c_str());
+  if (loc >= 0) {
+    glUniformMatrix4fv(loc, count, GL_FALSE, (const GLfloat*)m->ptr());
+  }
+}
+
 bool Shader::loadFiles(const std::string &vert, const std::string &frag) {
   string vSrc = StringUtils::ReadTextFile(vert);
   string fSrc = StringUtils::ReadTextFile(frag);

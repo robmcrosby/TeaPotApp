@@ -20,7 +20,7 @@ Mesh::~Mesh() {
   
 }
 
-void Mesh::draw(const Shader &shader) const {
+void Mesh::draw(const Shader &shader, int instances) const {
   GLuint programId = shader.programId();
   
   glBindVertexArray(mVertexArray);
@@ -35,7 +35,7 @@ void Mesh::draw(const Shader &shader) const {
     }
   }
   
-  glDrawArraysInstanced(GL_TRIANGLES, 0, mCount, 1);
+  glDrawArraysInstanced(GL_TRIANGLES, 0, mCount, instances);
   glBindVertexArray(0);
 }
 

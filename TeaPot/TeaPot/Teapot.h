@@ -20,6 +20,8 @@ class Teapot {
   quat mRotation;
   vec4 mExplosion;
   
+  mat4 mModels[32];
+  
 public:
   Teapot();
   ~Teapot();

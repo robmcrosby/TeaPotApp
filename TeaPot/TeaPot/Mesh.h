@@ -51,7 +51,7 @@ public:
   Mesh();
   ~Mesh();
   
-  void draw(const Shader &shader) const;
+  void draw(const Shader &shader, int instances = 1) const;
   
   bool loadBufferMap(const BufferMap &bufferMap);
   void unload();

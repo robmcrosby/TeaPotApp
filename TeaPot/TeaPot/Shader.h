@@ -32,6 +32,8 @@ public:
   void setUniform(const std::string &name, const vec4 &v) const;
   void setUniform(const std::string &name, const mat4 &m) const;
   
+  void setUniforms(const std::string &name, const mat4 *m, int count) const;
+  
   bool loadFiles(const std::string &vert, const std::string &frag);
   bool loadSrc(const std::string &vert, const std::string &frag);
   

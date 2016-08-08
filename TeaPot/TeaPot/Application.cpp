@@ -67,7 +67,8 @@ void Application::render() {
 }
 
 void Application::resize(float width, float height) {
-  mCamera.resizeWindow(vec2(width, height));
+  vec2 size(width, height);
+  mCamera.resize(size);
 }
 
 void Application::touchDown(float x, float y) {

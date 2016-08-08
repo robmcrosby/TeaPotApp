@@ -1,13 +1,17 @@
 #version 100
 
+#extension GL_ARB_draw_instanced : enable
+#extension GL_EXT_draw_instanced : enable
+
 attribute vec4 position;
 attribute vec4 normal;
 attribute vec4 center;
 
 uniform mat4 projection;
 uniform mat4 view;
-uniform mat4 model;
 uniform vec4 rotation;
+
+uniform mat4 models[32];
 
 uniform vec3 camera;
 
@@ -19,6 +23,8 @@ varying vec3 v_camera;
 vec3 rotate(vec4 q, vec3 v);
 
 void main() {
+  mat4 model = models[gl_InstanceIDEXT];
+  //mat4 model = models[0];
   vec4 pos = model * position;
   vec4 cen = model * center;
   vec3 dir = cen.xyz - explosion.xyz;

@@ -52,8 +52,8 @@ void Application::update(float time) {
       break;
     case EXPLODING:
       mExplosion.w += 2.0f * time;
-      if (mExplosion.w > 4.0f) {
-        mExplosion.w = 4.0f;
+      if (mExplosion.w > 2.0f) {
+        mExplosion.w = 2.0f;
         mState = IMPLODING;
       }
       break;

@@ -28,6 +28,7 @@
 		C182BCC81D5667E80035F4EC /* fracture.vert in Resources */ = {isa = PBXBuildFile; fileRef = C182BCC71D5667E80035F4EC /* fracture.vert */; };
 		C182BCCA1D57AA140035F4EC /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C182BCC91D57AA140035F4EC /* CoreMotion.framework */; };
 		C182BCCC1D57F60A0035F4EC /* physics.vert in Resources */ = {isa = PBXBuildFile; fileRef = C182BCCB1D57F60A0035F4EC /* physics.vert */; };
+		C182BCCE1D580CCC0035F4EC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C182BCCD1D580CCC0035F4EC /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		C182BCC71D5667E80035F4EC /* fracture.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = fracture.vert; path = Shaders/fracture.vert; sourceTree = "<group>"; };
 		C182BCC91D57AA140035F4EC /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		C182BCCB1D57F60A0035F4EC /* physics.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = physics.vert; path = Shaders/physics.vert; sourceTree = "<group>"; };
+		C182BCCD1D580CCC0035F4EC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C182BCCE1D580CCC0035F4EC /* CoreGraphics.framework in Frameworks */,
 				C182BCCA1D57AA140035F4EC /* CoreMotion.framework in Frameworks */,
 				C182BCA61D53FEAB0035F4EC /* GLKit.framework in Frameworks */,
 				C182BCA41D53FE960035F4EC /* UIKit.framework in Frameworks */,
@@ -85,6 +88,7 @@
 		C182BC731D53E8830035F4EC = {
 			isa = PBXGroup;
 			children = (
+				C182BCCD1D580CCC0035F4EC /* CoreGraphics.framework */,
 				C182BCC91D57AA140035F4EC /* CoreMotion.framework */,
 				C182BCA51D53FEAB0035F4EC /* GLKit.framework */,
 				C182BCA31D53FE960035F4EC /* UIKit.framework */,

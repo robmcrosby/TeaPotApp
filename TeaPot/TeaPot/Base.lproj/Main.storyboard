@@ -16,11 +16,34 @@
                     <view key="view" contentMode="scaleToFill" id="3se-qz-xqx" customClass="GLKView">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="7.9000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="T4y-IT-Ap5">
+                                <rect key="frame" x="18" y="28" width="267" height="31"/>
+                                <connections>
+                                    <action selector="countChange:" destination="BV1-FR-VrT" eventType="valueChanged" id="Zif-xK-4bY"/>
+                                    <action selector="countChangeDone:" destination="BV1-FR-VrT" eventType="touchUpInside" id="SWY-wc-3aC"/>
+                                    <action selector="countChangeDone:" destination="BV1-FR-VrT" eventType="touchUpOutside" id="XEm-Nb-Yc0"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2.5" minValue="1" maxValue="3.8999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="Td1-eo-ghf">
+                                <rect key="frame" x="18" y="91" width="267" height="31"/>
+                                <connections>
+                                    <action selector="TriangleChange:" destination="BV1-FR-VrT" eventType="valueChanged" id="fY8-Sn-5KU"/>
+                                    <action selector="TriangleChangeDone:" destination="BV1-FR-VrT" eventType="touchUpOutside" id="CXv-Cv-2yD"/>
+                                    <action selector="TriangleChangeDone:" destination="BV1-FR-VrT" eventType="touchUpInside" id="h2h-Qo-pOu"/>
+                                </connections>
+                            </slider>
+                        </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="countSlider" destination="T4y-IT-Ap5" id="FPM-0t-21W"/>
+                        <outlet property="triangleSlider" destination="Td1-eo-ghf" id="t2f-Su-pRE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="510" y="316"/>
         </scene>
     </scenes>
 </document>

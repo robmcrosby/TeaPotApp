@@ -11,4 +11,7 @@
 
 @interface ViewController : GLKViewController
 
+@property (weak, nonatomic) IBOutlet UISlider *countSlider;
+@property (weak, nonatomic) IBOutlet UISlider *triangleSlider;
+
 @end

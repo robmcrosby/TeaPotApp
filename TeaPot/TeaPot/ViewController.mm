@@ -28,6 +28,9 @@
 {
   [super viewDidLoad];
   
+  _countSlider.transform = CGAffineTransformRotate(_countSlider.transform, 180.0/180*M_PI);
+  _triangleSlider.transform = CGAffineTransformRotate(_triangleSlider.transform, 180.0/180*M_PI);
+  
   // Get an OpenGL ES 2.0 Context
   self.context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
   if (!self.context) {
@@ -129,5 +132,22 @@
                                         }];
   }
 }
+
+- (IBAction)countChange:(id)sender {
+  //std::cout << "Count Change: " << self.countSlider.value << std::endl;
+}
+
+- (IBAction)countChangeDone:(id)sender {
+  std::cout << "Count Change Done: " << self.countSlider.value << std::endl;
+}
+
+- (IBAction)TriangleChange:(id)sender {
+  //std::cout << "Triangle Change: " << self.triangleSlider.value << std::endl;
+}
+
+- (IBAction)TriangleChangeDone:(id)sender {
+  std::cout << "Triangle Change Done: " << self.triangleSlider.value << std::endl;
+}
+
 
 @end

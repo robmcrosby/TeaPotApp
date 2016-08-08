@@ -25,7 +25,7 @@
                                     <action selector="countChangeDone:" destination="BV1-FR-VrT" eventType="touchUpOutside" id="XEm-Nb-Yc0"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2.5" minValue="1" maxValue="3.8999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="Td1-eo-ghf">
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="2.8999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="Td1-eo-ghf">
                                 <rect key="frame" x="18" y="91" width="267" height="31"/>
                                 <connections>
                                     <action selector="TriangleChange:" destination="BV1-FR-VrT" eventType="valueChanged" id="fY8-Sn-5KU"/>

@@ -51,6 +51,7 @@ public:
   void handleMotion(float x, float y, float z, float w);
   
   void countChange(int index);
+  void triangleChange(int index);
   
 private:
   void startExplosion(vec2 touch);

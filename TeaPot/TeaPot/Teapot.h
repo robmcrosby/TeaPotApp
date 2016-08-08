@@ -23,10 +23,13 @@ struct Models {
 
 class Teapot {
   Shader mShader;
-  Mesh mMesh;
+  //Mesh mMesh;
   mat4 mModel;
   quat mRotation;
   vec4 mExplosion;
+  
+  int mCurMesh;
+  Mesh mMeshes[3];
   
   int mCurModels;
   Models mModels[MAX_MODELS];
@@ -42,6 +45,7 @@ public:
   void setExplosionTime(float t);
   void setExplosionCenter(const vec3 &center);
   void setModelsSet(int index);
+  void setMesh(int index);
   
   float explosionTime() const;
   const Shader& shader() const;

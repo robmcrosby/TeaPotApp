@@ -23,7 +23,7 @@
 		C182BCB91D5411BE0035F4EC /* basic.frag in Resources */ = {isa = PBXBuildFile; fileRef = C182BCB81D5411BE0035F4EC /* basic.frag */; };
 		C182BCBC1D541F330035F4EC /* Mesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C182BCBA1D541F330035F4EC /* Mesh.cpp */; };
 		C182BCC01D5574490035F4EC /* ObjLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C182BCBE1D5574490035F4EC /* ObjLoader.cpp */; };
-		C182BCC31D5575690035F4EC /* teapot.obj in Resources */ = {isa = PBXBuildFile; fileRef = C182BCC21D5575690035F4EC /* teapot.obj */; };
+		C182BCC31D5575690035F4EC /* teapot_med.obj in Resources */ = {isa = PBXBuildFile; fileRef = C182BCC21D5575690035F4EC /* teapot_med.obj */; };
 		C182BCC51D5576010035F4EC /* plane.obj in Resources */ = {isa = PBXBuildFile; fileRef = C182BCC41D5576010035F4EC /* plane.obj */; };
 		C182BCC81D5667E80035F4EC /* fracture.vert in Resources */ = {isa = PBXBuildFile; fileRef = C182BCC71D5667E80035F4EC /* fracture.vert */; };
 		C182BCCA1D57AA140035F4EC /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C182BCC91D57AA140035F4EC /* CoreMotion.framework */; };
@@ -31,6 +31,8 @@
 		C182BCCE1D580CCC0035F4EC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C182BCCD1D580CCC0035F4EC /* CoreGraphics.framework */; };
 		C182BCD11D5818BC0035F4EC /* Teapot.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C182BCCF1D5818BC0035F4EC /* Teapot.cpp */; };
 		C182BCD41D5824380035F4EC /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C182BCD21D5824380035F4EC /* Camera.cpp */; };
+		C182BCD61D58653F0035F4EC /* teapot_high.obj in Resources */ = {isa = PBXBuildFile; fileRef = C182BCD51D58653F0035F4EC /* teapot_high.obj */; };
+		C182BCD81D5868CE0035F4EC /* teapot_low.obj in Resources */ = {isa = PBXBuildFile; fileRef = C182BCD71D5868CE0035F4EC /* teapot_low.obj */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,7 +64,7 @@
 		C182BCBD1D542D230035F4EC /* GLIncludes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLIncludes.h; sourceTree = "<group>"; };
 		C182BCBE1D5574490035F4EC /* ObjLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ObjLoader.cpp; sourceTree = "<group>"; };
 		C182BCBF1D5574490035F4EC /* ObjLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjLoader.h; sourceTree = "<group>"; };
-		C182BCC21D5575690035F4EC /* teapot.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = teapot.obj; path = Meshes/teapot.obj; sourceTree = "<group>"; };
+		C182BCC21D5575690035F4EC /* teapot_med.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = teapot_med.obj; path = Meshes/teapot_med.obj; sourceTree = "<group>"; };
 		C182BCC41D5576010035F4EC /* plane.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = plane.obj; path = Meshes/plane.obj; sourceTree = "<group>"; };
 		C182BCC61D565F820035F4EC /* MeshUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeshUtils.h; sourceTree = "<group>"; };
 		C182BCC71D5667E80035F4EC /* fracture.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = fracture.vert; path = Shaders/fracture.vert; sourceTree = "<group>"; };
@@ -73,6 +75,8 @@
 		C182BCD01D5818BC0035F4EC /* Teapot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Teapot.h; sourceTree = "<group>"; };
 		C182BCD21D5824380035F4EC /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Camera.cpp; sourceTree = "<group>"; };
 		C182BCD31D5824380035F4EC /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
+		C182BCD51D58653F0035F4EC /* teapot_high.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = teapot_high.obj; path = Meshes/teapot_high.obj; sourceTree = "<group>"; };
+		C182BCD71D5868CE0035F4EC /* teapot_low.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = teapot_low.obj; path = Meshes/teapot_low.obj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,8 +190,10 @@
 		C182BCC11D5575240035F4EC /* Meshes */ = {
 			isa = PBXGroup;
 			children = (
+				C182BCD71D5868CE0035F4EC /* teapot_low.obj */,
+				C182BCD51D58653F0035F4EC /* teapot_high.obj */,
 				C182BCC41D5576010035F4EC /* plane.obj */,
-				C182BCC21D5575690035F4EC /* teapot.obj */,
+				C182BCC21D5575690035F4EC /* teapot_med.obj */,
 			);
 			name = Meshes;
 			sourceTree = "<group>";
@@ -252,10 +258,12 @@
 			files = (
 				C182BCC81D5667E80035F4EC /* fracture.vert in Resources */,
 				C182BCCC1D57F60A0035F4EC /* physics.vert in Resources */,
+				C182BCD61D58653F0035F4EC /* teapot_high.obj in Resources */,
 				C182BC8E1D53E8840035F4EC /* Main.storyboard in Resources */,
 				C182BC901D53E8840035F4EC /* Assets.xcassets in Resources */,
+				C182BCD81D5868CE0035F4EC /* teapot_low.obj in Resources */,
 				C182BCC51D5576010035F4EC /* plane.obj in Resources */,
-				C182BCC31D5575690035F4EC /* teapot.obj in Resources */,
+				C182BCC31D5575690035F4EC /* teapot_med.obj in Resources */,
 				C182BC931D53E8840035F4EC /* LaunchScreen.storyboard in Resources */,
 				C182BCB91D5411BE0035F4EC /* basic.frag in Resources */,
 				C182BCB71D54119A0035F4EC /* basic.vert in Resources */,

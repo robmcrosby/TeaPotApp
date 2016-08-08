@@ -13,7 +13,7 @@
 
 using namespace std;
 
-Teapot::Teapot(): mCurModels(0) {
+Teapot::Teapot(): mCurModels(0), mCurMesh(0) {
 }
 
 Teapot::~Teapot() {
@@ -23,9 +23,18 @@ void Teapot::init() {
   mShader.loadFiles("physics.vert", "basic.frag");
   
   BufferMap bufferMap;
-  ObjLoader::loadFile("teapot.obj", bufferMap);
+  ObjLoader::loadFile("teapot_low.obj", bufferMap);
   MeshUtils::addCenters(bufferMap, 3);
-  mMesh.loadBufferMap(bufferMap);
+  mMeshes[0].loadBufferMap(bufferMap);
+  
+  ObjLoader::loadFile("teapot_med.obj", bufferMap);
+  MeshUtils::addCenters(bufferMap, 3);
+  mMeshes[1].loadBufferMap(bufferMap);
+  
+  ObjLoader::loadFile("teapot_high.obj", bufferMap);
+  MeshUtils::addCenters(bufferMap, 3);
+  mMeshes[2].loadBufferMap(bufferMap);
+  
   mRotation = quat(vec3(1.0f, 0.0f, 0.0f), Pi/2.0f);
   
   mat4 rot = mRotation.toMat4();
@@ -67,7 +76,7 @@ void Teapot::bind() const {
 
 void Teapot::draw() const {
   int instances = mModels[mCurModels].mInstances;
-  mMesh.draw(mShader, instances);
+  mMeshes[mCurMesh].draw(mShader, instances);
 }
 
 void Teapot::setExplosionTime(float t) {
@@ -82,6 +91,10 @@ void Teapot::setExplosionCenter(const vec3 &center) {
 
 void Teapot::setModelsSet(int index) {
   mCurModels = index;
+}
+
+void Teapot::setMesh(int index) {
+  mCurMesh = index;
 }
 
 float Teapot::explosionTime() const {

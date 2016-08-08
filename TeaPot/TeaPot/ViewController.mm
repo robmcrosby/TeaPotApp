@@ -144,6 +144,7 @@
 
 - (IBAction)TriangleChange:(id)sender {
   //std::cout << "Triangle Change: " << self.triangleSlider.value << std::endl;
+  Application::instance().triangleChange((int)self.triangleSlider.value);
 }
 
 - (IBAction)TriangleChangeDone:(id)sender {

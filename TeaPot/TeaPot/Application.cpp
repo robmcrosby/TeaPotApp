@@ -100,6 +100,10 @@ void Application::countChange(int index) {
   mTeapot.setModelsSet(index);
 }
 
+void Application::triangleChange(int index) {
+  mTeapot.setMesh(index);
+}
+
 void Application::startExplosion(vec2 touch) {
   vec3 center = mCamera.getTouchLocation(touch);
   mTeapot.setExplosionCenter(center);

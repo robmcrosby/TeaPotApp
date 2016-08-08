@@ -96,6 +96,10 @@ void Application::handleMotion(float x, float y, float z, float w) {
   mCamera.rotate(rot);
 }
 
+void Application::countChange(int index) {
+  mTeapot.setModelsSet(index);
+}
+
 void Application::startExplosion(vec2 touch) {
   vec3 center = mCamera.getTouchLocation(touch);
   mTeapot.setExplosionCenter(center);

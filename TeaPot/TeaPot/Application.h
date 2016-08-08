@@ -50,6 +50,8 @@ public:
   void touchDown(float x, float y);
   void handleMotion(float x, float y, float z, float w);
   
+  void countChange(int index);
+  
 private:
   void startExplosion(vec2 touch);
 };

@@ -12,6 +12,14 @@
 #include "Mesh.h"
 #include "Shader.h"
 
+#define MAX_INSTANCES 8
+#define MAX_MODELS 4
+
+struct Models {
+  int mInstances;
+  mat4 mMatrices[MAX_INSTANCES];
+};
+
 
 class Teapot {
   Shader mShader;
@@ -20,7 +28,8 @@ class Teapot {
   quat mRotation;
   vec4 mExplosion;
   
-  mat4 mModels[32];
+  int mCurModels;
+  Models mModels[MAX_MODELS];
   
 public:
   Teapot();
@@ -32,6 +41,7 @@ public:
   
   void setExplosionTime(float t);
   void setExplosionCenter(const vec3 &center);
+  void setModelsSet(int index);
   
   float explosionTime() const;
   const Shader& shader() const;

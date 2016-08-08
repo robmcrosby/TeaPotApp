@@ -13,7 +13,7 @@
 
 using namespace std;
 
-Teapot::Teapot() {
+Teapot::Teapot(): mCurModels(0) {
 }
 
 Teapot::~Teapot() {
@@ -28,36 +28,46 @@ void Teapot::init() {
   mMesh.loadBufferMap(bufferMap);
   mRotation = quat(vec3(1.0f, 0.0f, 0.0f), Pi/2.0f);
   
-//  mModel = mRotation.toMat4() * mat4::Scale(vec3(4.0f, 4.0f, 4.0f)) * mat4::Trans3d(vec3(0.0, -0.5, 0.0));
+  mat4 rot = mRotation.toMat4();
+  mat4 scale = mat4::Scale(vec3(4.0f, 4.0f, 4.0f));
+  mModels[0].mInstances = 1;
+  mModels[0].mMatrices[0] = rot * scale * mat4::Trans3d(vec3(0.0, -0.5, 0.0));
   
-  mModels[0] = mRotation.toMat4() * mat4::Scale(vec3(2.5f, 2.5f, 2.5f)) * mat4::Trans3d(vec3(1.0, -0.5, 0.0));
-  mModels[1] = mRotation.toMat4() * mat4::Scale(vec3(2.5f, 2.5f, 2.5f)) * mat4::Trans3d(vec3(-1.0, -0.5, 0.0));
+  scale = mat4::Scale(vec3(2.5f, 2.5f, 2.5f));
+  mModels[1].mInstances = 2;
+  mModels[1].mMatrices[0] = rot * scale * mat4::Trans3d(vec3(1.0, -0.5, 0.0));
+  mModels[1].mMatrices[1] = rot * scale * mat4::Trans3d(vec3(-1.0, -0.5, 0.0));
   
-//  mModels[0] = mRotation.toMat4() * mat4::Scale(vec3(2.0f, 2.0f, 2.0f)) * mat4::Trans3d(vec3(1.0, -0.5, -0.7));
-//  mModels[1] = mRotation.toMat4() * mat4::Scale(vec3(2.0f, 2.0f, 2.0f)) * mat4::Trans3d(vec3(-1.0, -0.5, -0.7));
-//  mModels[2] = mRotation.toMat4() * mat4::Scale(vec3(2.0f, 2.0f, 2.0f)) * mat4::Trans3d(vec3(1.0, -0.5, 0.7));
-//  mModels[3] = mRotation.toMat4() * mat4::Scale(vec3(2.0f, 2.0f, 2.0f)) * mat4::Trans3d(vec3(-1.0, -0.5, 0.7));
+  scale = mat4::Scale(vec3(2.0f, 2.0f, 2.0f));
+  mModels[2].mInstances = 4;
+  mModels[2].mMatrices[0] = rot * scale * mat4::Trans3d(vec3(1.0, -0.5, -0.7));
+  mModels[2].mMatrices[1] = rot * scale * mat4::Trans3d(vec3(-1.0, -0.5, -0.7));
+  mModels[2].mMatrices[2] = rot * scale * mat4::Trans3d(vec3(1.0, -0.5, 0.7));
+  mModels[2].mMatrices[3] = rot * scale * mat4::Trans3d(vec3(-1.0, -0.5, 0.7));
   
-//  mModels[0] = mRotation.toMat4() * mat4::Scale(vec3(1.5f, 1.5f, 1.5f)) * mat4::Trans3d(vec3(1.0, -0.7, -0.7));
-//  mModels[1] = mRotation.toMat4() * mat4::Scale(vec3(1.5f, 1.5f, 1.5f)) * mat4::Trans3d(vec3(-1.0, -0.7, -0.7));
-//  mModels[2] = mRotation.toMat4() * mat4::Scale(vec3(1.5f, 1.5f, 1.5f)) * mat4::Trans3d(vec3(1.0, -0.7, 0.7));
-//  mModels[3] = mRotation.toMat4() * mat4::Scale(vec3(1.5f, 1.5f, 1.5f)) * mat4::Trans3d(vec3(-1.0, -0.7, 0.7));
-//  mModels[4] = mRotation.toMat4() * mat4::Scale(vec3(1.5f, 1.5f, 1.5f)) * mat4::Trans3d(vec3(1.0, 0.7, -0.7));
-//  mModels[5] = mRotation.toMat4() * mat4::Scale(vec3(1.5f, 1.5f, 1.5f)) * mat4::Trans3d(vec3(-1.0, 0.7, -0.7));
-//  mModels[6] = mRotation.toMat4() * mat4::Scale(vec3(1.5f, 1.5f, 1.5f)) * mat4::Trans3d(vec3(1.0, 0.7, 0.7));
-//  mModels[7] = mRotation.toMat4() * mat4::Scale(vec3(1.5f, 1.5f, 1.5f)) * mat4::Trans3d(vec3(-1.0, 0.7, 0.7));
+  scale = mat4::Scale(vec3(1.5f, 1.5f, 1.5f));
+  mModels[3].mInstances = 8;
+  mModels[3].mMatrices[0] = rot * scale * mat4::Trans3d(vec3(1.0, -0.7, -0.7));
+  mModels[3].mMatrices[1] = rot * scale * mat4::Trans3d(vec3(-1.0, -0.7, -0.7));
+  mModels[3].mMatrices[2] = rot * scale * mat4::Trans3d(vec3(1.0, -0.7, 0.7));
+  mModels[3].mMatrices[3] = rot * scale * mat4::Trans3d(vec3(-1.0, -0.7, 0.7));
+  mModels[3].mMatrices[4] = rot * scale * mat4::Trans3d(vec3(1.0, 0.7, -0.7));
+  mModels[3].mMatrices[5] = rot * scale * mat4::Trans3d(vec3(-1.0, 0.7, -0.7));
+  mModels[3].mMatrices[6] = rot * scale * mat4::Trans3d(vec3(1.0, 0.7, 0.7));
+  mModels[3].mMatrices[7] = rot * scale * mat4::Trans3d(vec3(-1.0, 0.7, 0.7));
 }
 
 void Teapot::bind() const {
   mShader.bind();
   mShader.setUniform("color", vec4(0.2f, 0.2f, 0.8f, 1.0f));
-  mShader.setUniforms("models", mModels, 32);
+  mShader.setUniforms("models", mModels[mCurModels].mMatrices, 8);
   mShader.setUniform("rotation", mRotation.toVec4());
   mShader.setUniform("explosion", mExplosion);
 }
 
 void Teapot::draw() const {
-  mMesh.draw(mShader, 2);
+  int instances = mModels[mCurModels].mInstances;
+  mMesh.draw(mShader, instances);
 }
 
 void Teapot::setExplosionTime(float t) {
@@ -68,6 +78,10 @@ void Teapot::setExplosionCenter(const vec3 &center) {
   mExplosion.x = center.x;
   mExplosion.y = center.y;
   mExplosion.z = center.z;
+}
+
+void Teapot::setModelsSet(int index) {
+  mCurModels = index;
 }
 
 float Teapot::explosionTime() const {

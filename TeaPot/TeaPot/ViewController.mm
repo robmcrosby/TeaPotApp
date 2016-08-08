@@ -135,10 +135,11 @@
 
 - (IBAction)countChange:(id)sender {
   //std::cout << "Count Change: " << self.countSlider.value << std::endl;
+  Application::instance().countChange((int)self.countSlider.value);
 }
 
 - (IBAction)countChangeDone:(id)sender {
-  std::cout << "Count Change Done: " << self.countSlider.value << std::endl;
+  //std::cout << "Count Change Done: " << self.countSlider.value << std::endl;
 }
 
 - (IBAction)TriangleChange:(id)sender {
@@ -146,7 +147,7 @@
 }
 
 - (IBAction)TriangleChangeDone:(id)sender {
-  std::cout << "Triangle Change Done: " << self.triangleSlider.value << std::endl;
+  //std::cout << "Triangle Change Done: " << self.triangleSlider.value << std::endl;
 }
 
 

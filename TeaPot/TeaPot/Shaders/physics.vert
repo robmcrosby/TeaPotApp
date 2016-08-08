@@ -24,12 +24,11 @@ vec3 rotate(vec4 q, vec3 v);
 
 void main() {
   mat4 model = models[gl_InstanceIDEXT];
-  //mat4 model = models[0];
   vec4 pos = model * position;
   vec4 cen = model * center;
   vec3 dir = cen.xyz - explosion.xyz;
   float len = length(dir);
-  float force = max(2.0, 6.0 - len) + (1.0 + center.w*2.0);
+  float force = max(2.0, 8.0 - len) + (1.0 + center.w*4.0);
   float t = explosion.w;
   
   // Apply Inital Explosion Force

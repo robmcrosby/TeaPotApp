@@ -30,7 +30,7 @@ void main() {
   pos += vec4(dir/len * force*t, 0.0);
   
   // Apply Gravity
-  pos.z -= 2.0*t*t;
+  pos.z -= 8.0*t*t;
   
   gl_Position = projection * view * pos;
   v_normal = rotate(rotation, normal.xyz);

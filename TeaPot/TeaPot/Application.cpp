@@ -22,21 +22,12 @@ Application& Application::instance() {
 void Application::setup(float width, float height) {
   resize(width, height);
   
-  mTeaPotShader.loadFiles("physics.vert", "basic.frag");
+  mTeapot.init();
   
   mDistance = 16.0f;
   mCenter = vec3(0.0f, 0.0f, 0.0f);
   mCamera = mCenter + vec3(1.0f, 1.0f, 1.0f).normalized() * mDistance;
   mView = mat4::LookAt(mCamera, mCenter, vec3(0.0f, 0.0f, 1.0f));
-  
-  BufferMap bufferMap;
-  ObjLoader::loadFile("teapot.obj", bufferMap);
-  MeshUtils::addCenters(bufferMap, 3);
-  mTeaPotMesh.loadBufferMap(bufferMap);
-  mTeaPotRotation = quat(vec3(1.0f, 0.0f, 0.0f), Pi/2.0f);
-  mTeaPotModel = mTeaPotRotation.toMat4() * mat4::Scale(vec3(4.0f, 4.0f, 4.0f)) * mat4::Trans3d(vec3(0.0, -0.5, 0.0));
-  
-  mExplosion.w = 1.0f;
   
   glEnable(GL_DEPTH_TEST);
 }
@@ -46,23 +37,28 @@ void Application::teardown() {
 }
 
 void Application::update(float time) {
+  float t = mTeapot.explosionTime();
+  time *= 2.0f;
+  
   switch (mState) {
     case DEFAULT:
-      mExplosion.w = 0.0;
+      mTeapot.setExplosionTime(0.0f);
       break;
     case EXPLODING:
-      mExplosion.w += 2.0f * time;
-      if (mExplosion.w > 2.0f) {
-        mExplosion.w = 2.0f;
+      t += time;
+      if (t > 2.0f) {
+        t = 2.0f;
         mState = IMPLODING;
       }
+      mTeapot.setExplosionTime(t);
       break;
     case IMPLODING:
-      mExplosion.w -= 2.0f * time;
-      if (mExplosion.w < 0.0f) {
-        mExplosion.w = 0.0f;
+      t -= time;
+      if (t < 0.0f) {
+        t = 0.0f;
         mState = DEFAULT;
       }
+      mTeapot.setExplosionTime(t);
       break;
     default:
       break;
@@ -73,15 +69,11 @@ void Application::render() {
   glClearColor(0.6f, 0.6f, 0.6f, 1.0f);
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
   
-  mTeaPotShader.bind();
-  mTeaPotShader.setUniform("color", vec4(0.2f, 0.2f, 0.8f, 1.0f));
-  mTeaPotShader.setUniform("projection", mProjection);
-  mTeaPotShader.setUniform("view", mView);
-  mTeaPotShader.setUniform("model", mTeaPotModel);
-  mTeaPotShader.setUniform("rotation", mTeaPotRotation.toVec4());
-  mTeaPotShader.setUniform("camera", mCamera);
-  mTeaPotShader.setUniform("explosion", mExplosion);
-  mTeaPotMesh.draw(mTeaPotShader);
+  mTeapot.bind();
+  mTeapot.shader().setUniform("projection", mProjection);
+  mTeapot.shader().setUniform("view", mView);
+  mTeapot.shader().setUniform("camera", mCamera);
+  mTeapot.draw();
 }
 
 void Application::resize(float width, float height) {
@@ -114,8 +106,6 @@ void Application::touchDown(float x, float y) {
     case PAUSED_IMP:
       mState = IMPLODING;
       break;
-    default:
-      break;
   }
 }
 
@@ -133,8 +123,6 @@ void Application::startExplosion(vec2 touch) {
   touch = touch*8.0f - vec2(4.0f, 4.0f);
   touch.y *= mWindowSize.h/mWindowSize.w;
   
-  cout << touch << endl;
-  
   mat4 proj = mProjection * mView;
   vec4 center = proj * vec4(0.0, 0.0, 0.0, 1.0);
   center.x = touch.x;
@@ -142,6 +130,6 @@ void Application::startExplosion(vec2 touch) {
   center = proj.inverse() * center;
   center.w = 0;
   
-  mExplosion = center;
+  mTeapot.setExplosionCenter(center.xyz());
   mState = EXPLODING;
 }

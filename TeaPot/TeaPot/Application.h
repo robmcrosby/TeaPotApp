@@ -10,8 +10,7 @@
 #define Application_hpp
 
 #include <iostream>
-#include "Shader.h"
-#include "Mesh.h"
+#include "Teapot.h"
 
 enum APP_STATE {
   DEFAULT,
@@ -34,12 +33,8 @@ class Application {
   mat4 mProjection;
   mat4 mView;
   
-  Shader mTeaPotShader;
-  Mesh mTeaPotMesh;
-  mat4 mTeaPotModel;
-  quat mTeaPotRotation;
+  Teapot mTeapot;
   
-  vec4 mExplosion;
   APP_STATE mState;
   
 private:

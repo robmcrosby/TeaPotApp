@@ -30,6 +30,7 @@
 		C182BCCC1D57F60A0035F4EC /* physics.vert in Resources */ = {isa = PBXBuildFile; fileRef = C182BCCB1D57F60A0035F4EC /* physics.vert */; };
 		C182BCCE1D580CCC0035F4EC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C182BCCD1D580CCC0035F4EC /* CoreGraphics.framework */; };
 		C182BCD11D5818BC0035F4EC /* Teapot.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C182BCCF1D5818BC0035F4EC /* Teapot.cpp */; };
+		C182BCD41D5824380035F4EC /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C182BCD21D5824380035F4EC /* Camera.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,8 @@
 		C182BCCD1D580CCC0035F4EC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		C182BCCF1D5818BC0035F4EC /* Teapot.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Teapot.cpp; sourceTree = "<group>"; };
 		C182BCD01D5818BC0035F4EC /* Teapot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Teapot.h; sourceTree = "<group>"; };
+		C182BCD21D5824380035F4EC /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Camera.cpp; sourceTree = "<group>"; };
+		C182BCD31D5824380035F4EC /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +127,8 @@
 				C182BCBE1D5574490035F4EC /* ObjLoader.cpp */,
 				C182BCD01D5818BC0035F4EC /* Teapot.h */,
 				C182BCCF1D5818BC0035F4EC /* Teapot.cpp */,
+				C182BCD31D5824380035F4EC /* Camera.h */,
+				C182BCD21D5824380035F4EC /* Camera.cpp */,
 				C182BCC11D5575240035F4EC /* Meshes */,
 				C182BCB51D5411820035F4EC /* Shaders */,
 				C182BCAF1D540A820035F4EC /* Utilities */,
@@ -266,6 +271,7 @@
 			files = (
 				C182BCC01D5574490035F4EC /* ObjLoader.cpp in Sources */,
 				C182BCA91D53FF8B0035F4EC /* Application.cpp in Sources */,
+				C182BCD41D5824380035F4EC /* Camera.cpp in Sources */,
 				C182BCAE1D5408A40035F4EC /* StringUtils.mm in Sources */,
 				C182BC841D53E8840035F4EC /* AppDelegate.mm in Sources */,
 				C182BCBC1D541F330035F4EC /* Mesh.cpp in Sources */,

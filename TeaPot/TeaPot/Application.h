@@ -10,6 +10,7 @@
 #define Application_hpp
 
 #include <iostream>
+#include "Camera.h"
 #include "Teapot.h"
 
 enum APP_STATE {
@@ -24,15 +25,7 @@ enum APP_STATE {
  * Singleton that controls the high level logic of the Application.
  */
 class Application {
-  vec2 mWindowSize;
-  
-  vec3 mCamera;
-  vec3 mCenter;
-  float mDistance;
-  
-  mat4 mProjection;
-  mat4 mView;
-  
+  Camera mCamera;
   Teapot mTeapot;
   
   APP_STATE mState;

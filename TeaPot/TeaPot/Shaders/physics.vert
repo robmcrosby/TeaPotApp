@@ -23,11 +23,14 @@ void main() {
   vec4 cen = model * center;
   vec3 dir = cen.xyz - explosion.xyz;
   float len = length(dir);
-  float force = max(1.0, 4.0 - len);
+  float force = max(2.0, 6.0 - len) + (1.0 + center.w*2.0);
   float t = explosion.w;
   
+  // Apply Inital Explosion Force
   pos += vec4(dir/len * force*t, 0.0);
-  pos.z -= 2.0 * explosion.w*explosion.w;
+  
+  // Apply Gravity
+  pos.z -= 2.0*t*t;
   
   gl_Position = projection * view * pos;
   v_normal = rotate(rotation, normal.xyz);
